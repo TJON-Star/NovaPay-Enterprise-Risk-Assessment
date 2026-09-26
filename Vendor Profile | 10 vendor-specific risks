@@ -25,10 +25,6 @@
 
 
 
-
-
-
-
 | ID     | Risk Scenario                                                    | Likelihood | Impact | Inherent Score |
 | ------ | ---------------------------------------------------------------- | ---------: | -----: | -------------: |
 | VTR-01 | Unauthorized access to NovaPay data through vendor compromise    |          4 |      5 |             20 |
