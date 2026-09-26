@@ -1,0 +1,13 @@
+**Overall Inherent Risk: CRITICAL**
+
+Primary drivers:
+
+Critical payment-processing dependency
+Access to sensitive information
+Direct technical/API integration
+High availability requirement
+External attack surface
+Potential regulatory consequences
+Potential difficulty replacing the service quickly
+
+**Vendor criticality and inherent risk are related, but they are not identical.**
