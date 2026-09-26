@@ -1,0 +1,12 @@
+| Risk Factor                    | Assessment |
+| ------------------------------ | ---------- |
+| Data sensitivity               | High       |
+| Volume of data                 | High       |
+| System access                  | High       |
+| Privileged access              | High       |
+| Business criticality           | High       |
+| Internet exposure              | High       |
+| Regulatory/compliance impact   | High       |
+| Service substitutability       | Medium     |
+| Third-party concentration risk | Medium     |
+| Overall inherent risk          | **High**   |
