@@ -1,0 +1,12 @@
+| Risk Factor                         | Score | Rationale                                                                        |
+| ----------------------------------- | ----: | -------------------------------------------------------------------------------- |
+| Data Sensitivity                    |     5 | Vendor may process sensitive payment and customer-related information            |
+| Data Volume                         |     4 | Payment infrastructure could involve substantial transaction volumes             |
+| System Access                       |     5 | API/integration access connects the vendor to critical NovaPay systems           |
+| Privileged Access                   |     4 | Administrative/support access may be required                                    |
+| Business Criticality                |     5 | Service disruption could affect payment operations                               |
+| Internet Exposure                   |     5 | Cloud/API service is externally accessible                                       |
+| Regulatory Exposure                 |     5 | Payment and information-security obligations may be affected by the relationship |
+| Service Substitutability            |     3 | Replacement may require technical and operational transition                     |
+| Fourth-Party/Subcontractor Exposure |     3 | Subcontractor dependencies are not yet established                               |
+| Availability Dependency             |     5 | Extended vendor outage could interrupt critical services                         |
