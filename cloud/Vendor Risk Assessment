@@ -1,0 +1,49 @@
+**API provider**
+
+Vendor: PayLink Cloud Services Ltd.
+Service: Cloud-based payment API and transaction-processing infrastructure
+Relationship: Critical technology service provider
+Business function: Payment processing / transaction routing
+Data handled: Customer identifiers, transaction data, payment-related information, API credentials and technical logs
+Integration: API connection to NovaPay's payment platform
+Hosting: Cloud environment
+Access: Privileged technical/API access to NovaPay systems
+Business dependency: High
+Assessment type: Initial third-party security and risk assessment
+
+
+**inherent risk**
+
+| Risk Factor                    | Assessment |
+| ------------------------------ | ---------- |
+| Data sensitivity               | High       |
+| Volume of data                 | High       |
+| System access                  | High       |
+| Privileged access              | High       |
+| Business criticality           | High       |
+| Internet exposure              | High       |
+| Regulatory/compliance impact   | High       |
+| Service substitutability       | Medium     |
+| Third-party concentration risk | Medium     |
+| Overall inherent risk          | **High**   |
+
+Inherent Risk → Controls → Control Effectiveness → Residual Risk
+
+
+**10 vendor-specific risks**
+
+| ID     | Risk Scenario                                                    | Likelihood | Impact | Inherent Score |
+| ------ | ---------------------------------------------------------------- | ---------: | -----: | -------------: |
+| VTR-01 | Unauthorized access to NovaPay data through vendor compromise    |          4 |      5 |             20 |
+| VTR-02 | Vendor API compromise disrupts payment processing                |          4 |      5 |             20 |
+| VTR-03 | Vendor fails to notify NovaPay of a security incident promptly   |          3 |      5 |             15 |
+| VTR-04 | Inadequate vulnerability management exposes integrated systems   |          4 |      4 |             16 |
+| VTR-05 | Excessive vendor privileges enable unauthorized activity         |          3 |      5 |             15 |
+| VTR-06 | Vendor outage causes payment-processing disruption               |          4 |      5 |             20 |
+| VTR-07 | Inadequate logging prevents investigation of suspicious activity |          3 |      4 |             12 |
+| VTR-08 | Vendor subcontractor introduces additional security exposure     |          3 |      4 |             12 |
+| VTR-09 | Vendor retains NovaPay data longer than authorized               |          3 |      4 |             12 |
+| VTR-10 | Vendor lacks adequate business continuity capability             |          3 |      5 |             15 |
+
+
+
