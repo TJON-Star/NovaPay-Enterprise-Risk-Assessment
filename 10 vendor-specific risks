@@ -1,0 +1,12 @@
+| ID     | Risk Scenario                                                    | Likelihood | Impact | Inherent Score |
+| ------ | ---------------------------------------------------------------- | ---------: | -----: | -------------: |
+| VTR-01 | Unauthorized access to NovaPay data through vendor compromise    |          4 |      5 |             20 |
+| VTR-02 | Vendor API compromise disrupts payment processing                |          4 |      5 |             20 |
+| VTR-03 | Vendor fails to notify NovaPay of a security incident promptly   |          3 |      5 |             15 |
+| VTR-04 | Inadequate vulnerability management exposes integrated systems   |          4 |      4 |             16 |
+| VTR-05 | Excessive vendor privileges enable unauthorized activity         |          3 |      5 |             15 |
+| VTR-06 | Vendor outage causes payment-processing disruption               |          4 |      5 |             20 |
+| VTR-07 | Inadequate logging prevents investigation of suspicious activity |          3 |      4 |             12 |
+| VTR-08 | Vendor subcontractor introduces additional security exposure     |          3 |      4 |             12 |
+| VTR-09 | Vendor retains NovaPay data longer than authorized               |          3 |      4 |             12 |
+| VTR-10 | Vendor lacks adequate business continuity capability             |          3 |      5 |             15 |
