@@ -1,0 +1,24 @@
+| Field                            | NovaPay Assessment                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Vendor ID                        | VND-001                                                                                                 |
+| Vendor Name                      | PayLink Cloud Services Ltd.                                                                             |
+| Vendor Type                      | Critical Technology / Cloud Service Provider                                                            |
+| Service                          | Cloud-based payment API and transaction-processing infrastructure                                       |
+| Business Function                | Payment processing and transaction routing                                                              |
+| Relationship Status              | Proposed / Pre-Onboarding                                                                               |
+| Assessment Type                  | Initial Third-Party Risk Assessment                                                                     |
+| Assessment Owner                 | GRC / Information Security                                                                              |
+| Business Owner                   | Head of Technology / Payment Operations                                                                 |
+| Vendor Criticality               | Critical                                                                                                |
+| Data Classification              | Confidential / Sensitive                                                                                |
+| Data Processed                   | Customer identifiers, transaction data, payment-related information, API credentials and technical logs |
+| System Access                    | API and technical access to NovaPay payment-processing environment                                      |
+| Privileged Access                | Potentially required for service administration and support                                             |
+| Internet Exposure                | Yes                                                                                                     |
+| Geographic Scope                 | Multi-market payment operations                                                                         |
+| Subcontractors                   | To be determined during due diligence                                                                   |
+| Service Availability Requirement | High                                                                                                    |
+| Service Substitutability         | Medium                                                                                                  |
+| Contract Dependency              | High                                                                                                    |
+| Assessment Frequency             | At onboarding and periodically thereafter                                                               |
+| Current Risk Status              | Assessment in progress                                                                                  |
