@@ -1,0 +1,44 @@
+**Inherent Risk Scoring Model**
+
+(5 × 5 likelihood/impact methodology)
+
+
+**Likelihood:**
+
+| Score | Definition     |
+| ----: | -------------- |
+|     1 | Rare           |
+|     2 | Unlikely       |
+|     3 | Possible       |
+|     4 | Likely         |
+|     5 | Almost Certain |
+
+
+**Impact:**
+
+| Score | Definition    |
+| ----: | ------------- |
+|     1 | Insignificant |
+|     2 | Minor         |
+|     3 | Moderate      |
+|     4 | Major         |
+|     5 | Severe        |
+
+
+**Formula:**
+Risk Score = Likelihood × Impact
+
+| Score | Rating   |
+| ----: | -------- |
+|   1–5 | Low      |
+|  6–11 | Medium   |
+| 12–19 | High     |
+| 20–25 | Critical |
+
+
+| Fourth-Party/Subcontractor Exposure |     3 | Subcontractor dependencies are not yet established                               |
+| Availability Dependency             |     5 | Extended vendor outage could interrupt critical services                         |
+
+
+**PayLink:**
+Overall Inherent Risk: CRITICAL
