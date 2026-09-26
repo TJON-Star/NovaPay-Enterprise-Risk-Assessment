@@ -12,3 +12,5 @@
 | VTR-08 | Subcontractor introduces additional security exposure                           |          3 |      4 |             12 | High     |
 | VTR-09 | Improper data retention exposes NovaPay information                             |          3 |      4 |             12 | High     |
 | VTR-10 | Vendor lacks effective recovery capability following disruption                 |          3 |      5 |             15 | High     |
+
+we haven't assessed controls yet.
