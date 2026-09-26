@@ -1,0 +1,6 @@
+What happens to NovaPay if this vendor disappears tomorrow?
+
+PayLink:
+PayLink provides infrastructure supporting payment transaction processing and API connectivity. A prolonged outage or security compromise could affect transaction availability, customer experience, operational continuity and potentially regulatory obligations
+
+**That gives us the justification for classifying the vendor as Critical.**
