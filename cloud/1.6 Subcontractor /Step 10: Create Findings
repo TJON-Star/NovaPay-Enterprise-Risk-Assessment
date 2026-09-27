@@ -1,0 +1,37 @@
+**Now convert control weaknesses into findings.**
+
+Finding VTF-01: Privileged Access Control Weakness
+
+- Condition: Review evidence identified an active privileged account that was no longer required.
+
+- Risk: Unnecessary privileged access could increase the likelihood and potential impact of unauthorized activity within the vendor environment.
+
+- Root cause: Access deprovisioning and periodic access-review processes are not operating consistently.
+
+- Impact: Increased unauthorized-access exposure affecting systems connected to NovaPay.
+
+- Severity: High
+
+- Recommended remediation:Disable the dormant privileged account and implement a documented process requiring timely removal of unnecessary privileged access.
+
+
+Finding VTF-02: Vulnerability Remediation Delays
+
+- Condition: The latest vulnerability assessment identified two critical vulnerabilities that exceeded the vendor's defined remediation timeline.
+
+- Risk: Unresolved critical vulnerabilities may increase the likelihood of exploitation affecting systems supporting NovaPay services.
+
+- Severity: High
+
+- Recommended remediation: Remediate the identified vulnerabilities, document exception approvals where remediation deadlines cannot be met, and implement management monitoring of overdue critical vulnerabilities.
+
+
+Finding VTF-03: Disaster Recovery Testing Evidence Gap
+
+- Condition: PayLink did not provide evidence of a recent disaster recovery test.
+
+- Risk: NovaPay cannot independently establish that the vendor can recover critical services within the required recovery objectives following a major disruption.
+
+- Severity: High
+
+- Recommended remediation: Conduct a documented disaster recovery test covering services supporting NovaPay, record the results and remediation actions, and provide the test report to NovaPay.
