@@ -1,21 +1,45 @@
-**Let's take five controls first.**
+Control assessment determines whether the controls supporting the identified vendor risks are appropriately designed, operating as intended, and supported by sufficient evidence.
 
-| Control                  | Design Effectiveness     | Operating Effectiveness | Evidence Sufficiency | Overall             |
-| ------------------------ | ------------------------ | ----------------------- | -------------------- | ------------------- |
-| MFA                      | Adequate                 | Not demonstrated        | Insufficient         | Evidence Gap        |
-| Privileged Access Review | Adequate                 | Exception identified    | Sufficient           | Partially Effective |
-| DR Testing               | Adequate/Not established | Not demonstrated        | Insufficient         | Evidence Gap        |
+A documented policy does not by itself demonstrate operating effectiveness. Where evidence only demonstrates that a control is documented, the assessment should distinguish between control design and operating effectiveness.
 
-**Notice the distinction.**
+For this assessment, five controls are tested in detail as representative examples. The wider control inventory is maintained separately.
 
-For MFA, we haven't proven that MFA is actually enforced across the environment. We only know the policy requires it.
+## Control Assessment
 
-For vulnerability management, the control exists, but operating evidence shows that remediation performance isn't consistently meeting the defined requirement.
+| Control                                                          | Evidence     | Evidence Observed                                                                                         | Design Effectiveness                                                           | Operating Effectiveness                        | Evidence Sufficiency             | Overall Assessment  |
+| ---------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------- | -------------------------------- | ------------------- |
+| MFA is required for privileged access                            | EV-04        | MFA Standard requires MFA for privileged access                                                           | Effective                                                                      | Not fully verified                             | Partial                          | Partially Effective |
+| Privileged access is reviewed periodically                       | EV-05        | Review evidence exists, but one dormant privileged account remains active                                 | Effective                                                                      | Partially Effective                            | Sufficient to identify exception | Partially Effective |
+| Critical vulnerabilities are remediated within defined timelines | EV-06, EV-07 | Vulnerability management process exists, but two critical vulnerabilities exceeded the remediation target | Effective                                                                      | Partially Effective                            | Sufficient to identify exception | Partially Effective |
+| Security incidents are formally managed                          | EV-09, EV-10 | Incident Response Plan exists and an exercise was performed                                               | Effective                                                                      | Effective based on available exercise evidence | Sufficient                       | Effective           |
+| Disaster recovery capability is tested                           | EV-13        | No recent DR test evidence was supplied                                                                   | Designed requirement exists, but operating effectiveness cannot be established | Not Determined                                 | Insufficient                     | Evidence Gap        |
 
-For DR, the problem isn't necessarily that PayLink has no disaster recovery capability. The problem is:
+## Interpretation
 
-**NovaPay currently cannot establish that the capability has been tested.**
+### VC-01: MFA for Privileged Access
 
-**That distinction matters.**
+EV-04 establishes that MFA is required for privileged access.
 
-Because a policy can be well designed but not operating effectively.
+However, the policy alone does not establish that MFA is technically enforced across all relevant privileged accounts.
+
+Assessment:
+
+* Design effectiveness: Effective
+* Operating effectiveness: Not fully verified
+* Evidence sufficiency: Partial
+* Overall: Partially Effective
+
+Additional evidence that could increase confidence includes privileged-account configuration evidence, MFA enforcement reports, or sampled access-control evidence.
+
+### VC-02: Privileged Access Review
+
+EV-05 demonstrates that a privileged-access review has been performed.
+
+However, the review identified an active privileged account that was no longer required.
+
+This demonstrates that the control exists but is not operating consistently enough to prevent unnecessary privileged access.
+
+Assessment:
+
+* Design effectiveness: Effective
+* Operating effectiveness:
