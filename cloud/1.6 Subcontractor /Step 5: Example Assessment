@@ -11,3 +11,15 @@ DR test evidence: Not provided
 **We don't immediately declare the vendor compliant.**
 
 We assess each item.
+
+| Evidence               | Result        | GRC Interpretation                                                   |
+| ---------------------- | ------------- | -------------------------------------------------------------------- |
+| ISO 27001 certificate  | Satisfactory* | Independent assurance exists, subject to scope/validity verification |
+| Access Control Policy  | Received      | Requires control implementation evidence                             |
+| Penetration Test       | Received      | Findings must be reviewed                                            |
+| Incident Response Plan | Received      | Need to assess notification/escalation provisions                    |
+| DR Test Evidence       | Missing       | Potential control/evidence gap                                       |
+
+**The asterisk on ISO 27001 matters.**
+
+Certification is evidence of a certification status, not proof that every individual control relevant to NovaPay is effective.
