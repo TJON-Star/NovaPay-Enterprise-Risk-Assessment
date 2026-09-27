@@ -1,0 +1,57 @@
+## Purpose
+
+Risk acceptance and exception management provide a controlled process for situations where an identified risk cannot be fully remediated within the required timeframe.
+
+An exception does not remove the underlying risk.
+
+It documents why the risk remains temporarily, what compensating measures are in place, who is accountable for the decision, when the decision must be reviewed, and what conditions require escalation.
+
+Risk acceptance is a business decision made by an authorised risk owner. The GRC function facilitates assessment, documentation, challenge, monitoring and reassessment.
+
+---
+
+## When an Exception May Be Considered
+
+An exception may be considered where:
+
+* remediation cannot reasonably be completed within the required timeframe;
+* immediate remediation would create a disproportionate operational impact;
+* a technical or contractual dependency prevents immediate remediation;
+* compensating controls can reduce exposure while permanent remediation is completed;
+* the business has a documented need to continue the service.
+
+An exception should not be used simply because remediation is inconvenient or because evidence has not yet been requested.
+
+Where a control deficiency can reasonably be remediated within the required timeframe, remediation should remain the primary treatment.
+
+---
+
+# PayLink Exception Scenario
+
+## Exception ID
+
+**EXC-001**
+
+## Linked Finding
+
+**VTF-03: Disaster Recovery Testing Evidence Gap**
+
+## Linked Risks
+
+**VTR-03: Vendor outage disrupts payment services**
+
+**VTR-10: Vendor lacks effective recovery capability following disruption**
+
+## Current Risk Position
+
+VTR-03:
+
+**20, Critical**
+
+VTR-10:
+
+**15, High**
+
+The current residual ratings remain unchanged because the available evidence does not provide sufficient justification for reducing the risk scores.
+
+The absence of DR testing evidence is therefore
