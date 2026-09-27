@@ -1,0 +1,24 @@
+Don't treat every document as equal.
+
+**For example, imagine PayLink says:**
+
+"We have strong cybersecurity controls."
+
+That is not evidence.
+
+If they provide an ISO 27001 certificate, we can verify things such as:
+
+Is the certificate current?
+Does the certificate actually belong to the vendor?
+What organizational scope does it cover?
+Does the scope include the service NovaPay is buying?
+Who issued the certificate?
+When does it expire?
+
+**Likewise, if they provide a penetration-test report, we don't simply mark: Penetration testing = Yes**
+
+We ask:
+
+What was tested? When? Were critical/high findings identified? Were they remediated?
+
+That's the difference between evidence collection and checkbox compliance.
