@@ -1,12 +1,10 @@
 **Let's take five controls first.**
 
-| Control                                                          | Evidence      | Assessment                                                       | Effectiveness                  |
-| ---------------------------------------------------------------- | ------------- | ---------------------------------------------------------------- | ------------------------------ |
-| MFA is required for privileged access                            | EV-04         | Policy requires MFA                                              | Partially Effective            |
-| Privileged access is reviewed periodically                       | EV-05         | Review exists, but one dormant privileged account remains active | Partially Effective            |
-| Critical vulnerabilities are remediated within defined timelines | EV-07         | Two critical vulnerabilities exceeded the remediation target     | Partially Effective            |
-| Security incidents are formally managed                          | EV-09 + EV-10 | IR plan exists and exercise was performed                        | Effective                      |
-| Disaster recovery capability is tested                           | EV-13         | No recent DR test evidence supplied                              | **Ineffective / Evidence Gap** |
+| Control                  | Design Effectiveness     | Operating Effectiveness | Evidence Sufficiency | Overall             |
+| ------------------------ | ------------------------ | ----------------------- | -------------------- | ------------------- |
+| MFA                      | Adequate                 | Not demonstrated        | Insufficient         | Evidence Gap        |
+| Privileged Access Review | Adequate                 | Exception identified    | Sufficient           | Partially Effective |
+| DR Testing               | Adequate/Not established | Not demonstrated        | Insufficient         | Evidence Gap        |
 
 **Notice the distinction.**
 
@@ -19,3 +17,5 @@ For DR, the problem isn't necessarily that PayLink has no disaster recovery capa
 **NovaPay currently cannot establish that the capability has been tested.**
 
 **That distinction matters.**
+
+Because a policy can be well designed but not operating effectively.
