@@ -43,7 +43,7 @@ Continued unnecessary privileged access increases exposure to unauthorized activ
 * Evidence of revised deprovisioning controls, where applicable
 * Follow-up control test
 
-The finding primarily maps to VTR-04 because the observed condition directly concerns excessive vendor privileges. It should not automatically be treated as proof that VTR-01 has increased without reassessing the broader compromise scenario.
+The finding primarily maps to VTR-05 because the observed condition directly concerns excessive vendor privileges. It should not automatically be treated as proof that VTR-01 has increased without reassessing the broader vendor-compromise scenario.
 
 ---
 
