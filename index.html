@@ -269,24 +269,24 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
     <div class="tablewrap">
     <table>
       <tr><th>Finding</th><th>Linked risk</th><th>Inherent</th><th>Current residual</th><th>Owner</th><th>Status</th></tr>
-      <tr><td>VTF-01 Privileged access weakness</td><td>VTR-04</td><td><span class="badge b-high">16 High</span></td><td><span class="badge b-high">16 High</span></td><td>NovaPay Risk Owner</td><td><span class="badge b-open">Open</span></td></tr>
-      <tr><td>VTF-02 Vulnerability remediation delays</td><td>VTR-05</td><td><span class="badge b-high">15 High</span></td><td><span class="badge b-high">15 High</span></td><td>NovaPay Risk Owner</td><td><span class="badge b-open">Open</span></td></tr>
+      <tr><td>VTF-01 Privileged access weakness</td><td>VTR-05</td><td><span class="badge b-high">15 High</span></td><td><span class="badge b-high">15 High</span></td><td>NovaPay Risk Owner</td><td><span class="badge b-open">Open</span></td></tr>
+      <tr><td>VTF-02 Vulnerability remediation delays</td><td>VTR-04</td><td><span class="badge b-high">16 High</span></td><td><span class="badge b-high">16 High</span></td><td>NovaPay Risk Owner</td><td><span class="badge b-open">Open</span></td></tr>
       <tr><td>VTF-03 DR testing evidence gap</td><td>VTR-03</td><td><span class="badge b-crit">20 Critical</span></td><td><span class="badge b-crit">20 Critical</span></td><td>Service/Risk Owner</td><td><span class="badge b-open">Open</span></td></tr>
       <tr><td>VTF-03 DR testing evidence gap</td><td>VTR-10</td><td><span class="badge b-high">15 High</span></td><td><span class="badge b-high">15 High</span></td><td>NovaPay Risk Owner</td><td><span class="badge b-open">Open</span></td></tr>
     </table>
     </div>
-    <p class="sub" style="margin-top:10px">Projected post-remediation targets (illustrative, pending validation): VTF-01 15→10 Medium · VTF-02 16→10 Medium · VTF-03 remains High/Critical until a DR test is evidenced.</p>
+    <p class="sub" style="margin-top:10px">Target residual risk is not assigned numerically until remediation evidence is received and validated. The affected risks will be reassessed using the approved scoring methodology.</p>
   </section>
 
   <section>
     <h2>Risk Decision &amp; Acceptance</h2>
-    <p class="sub">All three findings route to mitigation; none accepted outright.</p>
+    <p class="sub">All three findings are currently routed to mitigation. No risk acceptance has been recorded.</p>
     <div class="tablewrap">
     <table>
       <tr><th>Risk</th><th>Residual (target)</th><th>Decision</th><th>Owner</th></tr>
-      <tr><td>Privileged access</td><td><span class="badge b-med">Medium</span></td><td>Conditional acceptance pending remediation</td><td>Technology Risk Owner</td></tr>
-      <tr><td>Vulnerability delays</td><td><span class="badge b-med">Medium</span></td><td>Remediation required</td><td>Security Owner</td></tr>
-      <tr><td>DR testing gap</td><td><span class="badge b-high">High</span></td><td>Conditional approval, 60-day deadline</td><td>Business Risk Owner</td></tr>
+      <tr><td>Privileged access</td><td>Not yet assigned</td><td>Mitigation required; acceptance not recorded</td><td>Technology Risk Owner</td></tr>
+      <tr><td>Vulnerability delays</td><td>Not yet assigned</td><td>Remediation required; acceptance not recorded</td><td>Security Owner</td></tr>
+      <tr><td>DR testing gap</td><td>Not yet assigned</td><td>Mitigation required; EXC-001 proposed / pending approval</td><td>Business Risk Owner</td></tr>
     </table>
     </div>
   </section>
@@ -294,16 +294,17 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
 
 <section>
   <h2>Ongoing Vendor Monitoring — KRIs</h2>
+  <p class="sub">Monitoring connects measurable signals to risk, findings, ownership, escalation and reassessment. Threshold breaches do not automatically change a risk score; they trigger review and evidence-based reassessment.</p>
   <div class="tablewrap">
   <table>
-    <tr><th>Metric</th><th>Threshold</th><th>Escalation</th></tr>
-    <tr><td>Critical vulnerabilities overdue</td><td>&gt; 0</td><td>Immediate escalation</td></tr>
-    <tr><td>Security incidents affecting NovaPay</td><td>Any material incident</td><td>Immediate notification</td></tr>
-    <tr><td>DR testing</td><td>Overdue</td><td>High-risk escalation</td></tr>
-    <tr><td>Privileged-access review</td><td>Missed review</td><td>Security escalation</td></tr>
-    <tr><td>SLA availability</td><td>Below contractual threshold</td><td>Vendor review</td></tr>
-    <tr><td>Open High-risk findings</td><td>&gt; agreed timeframe</td><td>Management escalation</td></tr>
-    <tr><td>Security certification</td><td>Expired</td><td>Reassessment</td></tr>
+    <tr><th>KRI</th><th>Measurement / Threshold</th><th>Linked Risk / Finding</th><th>Owner</th><th>Action / Escalation</th><th>Reassessment Trigger</th></tr>
+    <tr><td>Critical vulnerabilities overdue</td><td>Count &gt; 0</td><td>VTR-04 / VTF-02</td><td>PayLink Security</td><td>Immediate security escalation; remediation tracking</td><td>Reassess VTR-04 if overdue exposure persists or materially changes</td></tr>
+    <tr><td>Material security incidents affecting NovaPay</td><td>Any material incident</td><td>VTR-01, VTR-02, VTR-06</td><td>Vendor Security / NovaPay Incident Management</td><td>Immediate notification, incident response and risk review</td><td>Event-driven reassessment of affected risks</td></tr>
+    <tr><td>DR testing</td><td>Required test overdue</td><td>VTR-03, VTR-10 / VTF-03 / EXC-001</td><td>PayLink BCM/IT</td><td>High-risk escalation; review exception status and compensating controls</td><td>Reassess VTR-03 and VTR-10 when test evidence is validated</td></tr>
+    <tr><td>Privileged-access review</td><td>Required review missed</td><td>VTR-05 / VTF-01</td><td>PayLink Security</td><td>Security escalation; access review and remediation</td><td>Reassess VTR-05 after remediation evidence and follow-up testing</td></tr>
+    <tr><td>SLA availability</td><td>Below contractual threshold</td><td>VTR-03 / VTR-02</td><td>NovaPay Service Owner</td><td>Vendor performance review and escalation under contract</td><td>Reassess affected availability risks if failure is material or persistent</td></tr>
+    <tr><td>Open High-severity findings</td><td>Beyond agreed remediation timeframe</td><td>VTF-01, VTF-02, VTF-03</td><td>NovaPay Risk Owner</td><td>Management escalation; evaluate exception or further treatment</td><td>Reassess linked risks after remediation validation or material deterioration</td></tr>
+    <tr><td>Security certification</td><td>Expired or scope no longer supports reliance</td><td>VTR-01, VTR-04, VTR-07</td><td>Third-Party Risk / Compliance</td><td>Evidence request and reassessment</td><td>Event-driven reassessment of affected risk areas</td></tr>
   </table>
   </div>
 </section>
