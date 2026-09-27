@@ -1,21 +1,18 @@
+# Step 13: Risk Acceptance & Exception Management
+
 ## Purpose
 
 Risk acceptance and exception management provide a controlled process for situations where an identified risk cannot be fully remediated within the required timeframe.
 
-An exception does not remove the underlying risk.
+An exception does not remove the underlying risk. It documents why the risk remains temporarily, what compensating measures are in place, who is accountable for the decision, when the decision must be reviewed, and what conditions require escalation.
 
-It documents why the risk remains temporarily, what compensating measures are in place, who is accountable for the decision, when the decision must be reviewed, and what conditions require escalation.
-
-Risk acceptance is a business decision made by an authorised risk owner. The GRC function facilitates assessment, documentation, challenge, monitoring and reassessment.
-
----
+Risk acceptance is a business decision made by an authorised risk owner. GRC facilitates assessment, documentation, challenge, monitoring and reassessment.
 
 ## When an Exception May Be Considered
 
 An exception may be considered where:
 
 * remediation cannot reasonably be completed within the required timeframe;
-* immediate remediation would create a disproportionate operational impact;
 * a technical or contractual dependency prevents immediate remediation;
 * compensating controls can reduce exposure while permanent remediation is completed;
 * the business has a documented need to continue the service.
@@ -24,25 +21,23 @@ An exception should not be used simply because remediation is inconvenient or be
 
 Where a control deficiency can reasonably be remediated within the required timeframe, remediation should remain the primary treatment.
 
----
+## PayLink Exception Scenario
 
-# PayLink Exception Scenario
-
-## Exception ID
+### Exception ID
 
 **EXC-001**
 
-## Linked Finding
+### Linked Finding
 
 **VTF-03: Disaster Recovery Testing Evidence Gap**
 
-## Linked Risks
+### Linked Risks
 
 **VTR-03: Vendor outage disrupts payment services**
 
 **VTR-10: Vendor lacks effective recovery capability following disruption**
 
-## Current Risk Position
+### Current Risk Position
 
 VTR-03:
 
@@ -54,12 +49,80 @@ VTR-10:
 
 The current residual ratings remain unchanged because the available evidence does not provide sufficient justification for reducing the risk scores.
 
-The absence of DR testing evidence is therefore
+The absence of DR testing evidence is not proof that PayLink lacks recovery capability. It means the capability has not been sufficiently demonstrated through current evidence.
 
-** The existence of an exception does not make the underlying control effective. **
+## Proposed Exception Treatment
 
-** how do we make sure its risk does not quietly deteriorate six months later?” **
+The existence of EXC-001 does not mean the risk has been accepted.
 
-A vendor can be acceptable today and become high-risk later because of a security incident, expired ISO certificate, new subcontractor, critical vulnerability, SLA failures, acquisition, architecture change, or change in the data it processes.
+**Status: Proposed / Pending Approval**
 
-** So TPRM is continuous. **
+The authorised risk owner must determine whether temporary exception treatment is appropriate and document the business justification before any risk acceptance becomes effective.
+
+### Proposed Compensating Controls
+
+While the DR evidence gap remains open, the following measures may be used where they are actually available and documented:
+
+* increased availability monitoring;
+* active vendor escalation contacts;
+* SLA performance monitoring;
+* validation of documented RTO/RPO requirements;
+* incident escalation procedures;
+* NovaPay continuity arrangements;
+* management reporting on the open DR evidence gap.
+
+These measures do not automatically reduce the current risk score.
+
+## Required Approval Record
+
+Before risk acceptance becomes effective, the record should contain:
+
+* affected risk IDs;
+* current residual risk;
+* documented business justification;
+* risk owner;
+* acceptance authority;
+* compensating controls;
+* acceptance date;
+* expiry or review date;
+* monitoring requirements;
+* escalation triggers.
+
+No approval authority, approval date or acceptance expiry is invented in this portfolio assessment. Those fields must be assigned by the accountable organisation.
+
+## Monitoring and Escalation
+
+EXC-001 should be escalated or reviewed if:
+
+* the required DR test becomes further overdue;
+* the DR test fails to achieve required RTO/RPO;
+* a material vendor outage occurs;
+* a material security or resilience incident occurs;
+* compensating controls are no longer available;
+* the exception reaches its review or expiry date;
+* material changes occur to the vendor service, architecture or dependencies.
+
+## Closure
+
+The exception should not be closed merely because PayLink submits a DR report.
+
+Closure requires:
+
+1. DR test evidence is received.
+2. Actual recovery performance is reviewed.
+3. RTO/RPO results are compared with requirements.
+4. Exceptions or deficiencies are documented.
+5. Remediation is completed where required.
+6. NovaPay validates the evidence.
+7. VTR-03 and VTR-10 are reassessed independently.
+8. The authorised risk owner formally closes or renews the exception.
+
+## Core Principle
+
+**Risk acceptance does not eliminate risk.**
+
+**An exception does not make a control effective.**
+
+**A remediation claim does not equal validated remediation.**
+
+The purpose of Step 13 is controlled decision-making and accountability. Step 14 then ensures that accepted or open risk does not quietly deteriorate over time.
