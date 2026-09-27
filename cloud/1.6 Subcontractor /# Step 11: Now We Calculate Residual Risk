@@ -1,0 +1,154 @@
+# Step 11: Now We Calculate Residual Risk
+
+This is where the third-party risk assessment connects the control assessment and findings back to the original risk register.
+
+The important principle is:
+
+**Residual risk is not automatically reduced simply because controls or policies exist.**
+
+The residual rating should reflect the control environment supported by the evidence actually available at the time of assessment.
+
+## VTR-03: Vendor Outage Disrupts Critical Payment Services
+
+### 1. Inherent Risk
+
+Before considering controls:
+
+**Likelihood = 4**
+**Impact = 5**
+
+**Risk Score = 4 × 5 = 20**
+
+**Inherent Risk = Critical**
+
+The risk is critical because PayLink supports payment-processing and transaction-routing services that are highly dependent on service availability.
+
+### 2. Relevant Controls
+
+The assessment identified the following controls relevant to this risk:
+
+* Business Continuity Plan
+* Service Level Agreement
+* Defined Recovery Time Objective (RTO)
+* Defined Recovery Point Objective (RPO)
+* Incident response capability
+* Disaster recovery capability and testing
+
+Evidence reviewed included:
+
+* EV-09 Incident Response Plan
+* EV-12 Business Continuity Plan
+* EV-17 SLA
+* EV-18 RTO/RPO documentation
+* EV-13 Disaster Recovery Test Report
+
+EV-13 was not provided.
+
+### 3. Control Assessment
+
+The available evidence demonstrates that PayLink has documented continuity and recovery requirements.
+
+However, the absence of recent disaster recovery testing evidence means NovaPay cannot independently establish that the documented recovery capability operates effectively under realistic disruption conditions.
+
+Therefore, the controls provide risk reduction, but confidence in their operating effectiveness is limited.
+
+### 4. Residual Risk Assessment
+
+Based on the available evidence:
+
+**Likelihood = 3**
+**Impact = 5**
+
+**Residual Risk Score = 3 × 5 = 15**
+
+**Residual Risk = High**
+
+The impact remains at 5 because a major outage affecting critical payment-processing services could still have severe business consequences.
+
+The likelihood is reduced from 4 to 3 because documented continuity, SLA and recovery requirements provide some preventive and recovery capability.
+
+However, the likelihood is not reduced further because recent DR testing has not been demonstrated.
+
+### 5. Risk Pathway
+
+The assessment therefore follows this pathway:
+
+**VTR-03**
+
+**Inherent Risk: 20 Critical**
+
+↓
+
+**Controls assessed**
+
+↓
+
+**Control weakness / evidence gap identified**
+
+↓
+
+**Residual Risk: 15 High**
+
+↓
+
+**Remediation Required**
+
+↓
+
+**DR testing and evidence validation**
+
+↓
+
+**Residual risk reassessment**
+
+### 6. Treatment
+
+**Treatment:** Mitigate
+
+Required remediation:
+
+1. Conduct a documented disaster recovery test covering services supporting NovaPay.
+2. Record the test scenario, scope, results, recovery times and identified exceptions.
+3. Compare actual recovery performance against the defined RTO/RPO.
+4. Document remediation actions for any failed or partially achieved recovery objectives.
+5. Provide the completed DR test report to NovaPay.
+6. Reassess the residual risk after the remediation evidence has been reviewed.
+
+### 7. Target Residual Risk
+
+The target residual risk is:
+
+**Likelihood = 2**
+**Impact = 5**
+
+**Target Score = 2 × 5 = 10**
+
+**Target Residual Risk = Medium**
+
+This is a target state, not the current assessment result.
+
+The target should only be adopted after NovaPay reviews satisfactory evidence demonstrating that the recovery capability has been tested and identified deficiencies have been addressed.
+
+## Important GRC Principle
+
+Do not describe PayLink as "secure," "compliant," or "low risk" simply because policies, certifications or contractual documents exist.
+
+The assessment should distinguish between:
+
+**Control documented**
+
+and
+
+**Control operating effectively**
+
+and
+
+**Control operating effectively with sufficient evidence**
+
+This distinction is particularly important for third-party risk because NovaPay may depend on controls that it does not directly operate.
+
+The current assessment therefore remains:
+
+**Critical Inherent Risk → Controls Assessed → High Residual Risk → Remediation Required → Reassessment**
+
+This provides a defensible risk-management trail rather than a simple vendor-compliance conclusion.
