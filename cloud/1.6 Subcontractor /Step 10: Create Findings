@@ -1,37 +1,127 @@
-**Now convert control weaknesses into findings.**
+The control assessment identifies exceptions and evidence gaps. These are converted into formal findings so that remediation, ownership, validation and risk reassessment can be tracked.
 
-Finding VTF-01: Privileged Access Control Weakness
+A finding should describe what was observed, why it matters, the affected risk, and what remediation is required.
 
-- Condition: Review evidence identified an active privileged account that was no longer required.
+Where the available evidence does not establish a root cause, the assessment should not present an assumed root cause as fact.
 
-- Risk: Unnecessary privileged access could increase the likelihood and potential impact of unauthorized activity within the vendor environment.
+## VTF-01: Privileged Access Control Weakness
 
-- Root cause: Access deprovisioning and periodic access-review processes are not operating consistently.
+**Linked Risk:** VTR-04
+**Severity:** High
+**Treatment:** Mitigate
 
-- Impact: Increased unauthorized-access exposure affecting systems connected to NovaPay.
+### Condition
 
-- Severity: High
+The privileged-access review evidence identified an active privileged account that was no longer required.
 
-- Recommended remediation:Disable the dormant privileged account and implement a documented process requiring timely removal of unnecessary privileged access.
+### Risk
 
+Unnecessary privileged access increases the opportunity for unauthorized or inappropriate activity affecting systems connected to NovaPay.
 
-Finding VTF-02: Vulnerability Remediation Delays
+### Potential Root Cause
 
-- Condition: The latest vulnerability assessment identified two critical vulnerabilities that exceeded the vendor's defined remediation timeline.
+The available evidence suggests that privileged-access deprovisioning or periodic access-review processes may not be operating consistently.
 
-- Risk: Unresolved critical vulnerabilities may increase the likelihood of exploitation affecting systems supporting NovaPay services.
+Root cause should be confirmed by the vendor during remediation rather than assumed from the observed exception.
 
-- Severity: High
+### Impact
 
-- Recommended remediation: Remediate the identified vulnerabilities, document exception approvals where remediation deadlines cannot be met, and implement management monitoring of overdue critical vulnerabilities.
+Continued unnecessary privileged access increases exposure to unauthorized activity within systems supporting NovaPay services.
 
+### Remediation
 
-Finding VTF-03: Disaster Recovery Testing Evidence Gap
+* Disable the identified dormant privileged account.
+* Confirm removal through access-management evidence.
+* Review the privileged-access deprovisioning process.
+* Establish documented requirements for timely removal of unnecessary privileged access.
+* Perform a follow-up privileged-access review.
 
-- Condition: PayLink did not provide evidence of a recent disaster recovery test.
+### Closure Evidence
 
-- Risk: NovaPay cannot independently establish that the vendor can recover critical services within the required recovery objectives following a major disruption.
+* Account-disablement evidence
+* Updated privileged-access review
+* Evidence of revised deprovisioning controls, where applicable
+* Follow-up control test
 
-- Severity: High
+The finding primarily maps to VTR-04 because the observed condition directly concerns excessive vendor privileges. It should not automatically be treated as proof that VTR-01 has increased without reassessing the broader compromise scenario.
 
-- Recommended remediation: Conduct a documented disaster recovery test covering services supporting NovaPay, record the results and remediation actions, and provide the test report to NovaPay.
+---
+
+## VTF-02: Vulnerability Remediation Delays
+
+**Linked Risk:** VTR-05
+**Severity:** High
+**Treatment:** Mitigate
+
+### Condition
+
+The latest vulnerability assessment identified two critical vulnerabilities that exceeded the vendor's defined remediation timeline.
+
+### Risk
+
+Unresolved critical vulnerabilities may increase exposure to exploitation affecting systems supporting NovaPay.
+
+### Impact
+
+Extended exposure to critical vulnerabilities may increase the likelihood that an exploitable weakness remains available to an attacker for longer than the vendor's defined risk tolerance permits.
+
+### Remediation
+
+* Remediate the identified critical vulnerabilities.
+* Provide evidence confirming remediation.
+* Establish an exception process for vulnerabilities that cannot be remediated within the defined timeframe.
+* Require documented risk-owner approval for remediation exceptions.
+* Establish management monitoring for overdue critical vulnerabilities.
+
+### Closure Evidence
+
+* Updated vulnerability assessment
+* Remediation evidence
+* Exception records where applicable
+* Evidence of management review for overdue critical vulnerabilities
+* Follow-up control test
+
+The available evidence establishes a remediation-performance exception. It does not by itself establish the underlying organisational root cause.
+
+---
+
+## VTF-03: Disaster Recovery Testing Evidence Gap
+
+**Linked Risks:** VTR-03 and VTR-10
+**Severity:** High
+**Treatment:** Mitigate
+
+### Condition
+
+No recent disaster recovery test evidence was supplied for the vendor environment supporting NovaPay.
+
+### Risk
+
+NovaPay cannot independently establish from the available evidence that PayLink can recover critical services within the required recovery objectives following a significant disruption.
+
+### Impact
+
+Failure to demonstrate recovery capability could increase the duration and business impact of a disruption affecting payment-processing services.
+
+### Remediation
+
+The vendor should:
+
+* Conduct a documented DR test covering services supporting NovaPay.
+* Define the test scenario, scope and participating systems.
+* Record actual recovery times.
+* Compare actual recovery performance against the required RTO and RPO.
+* Document exceptions and failed recovery objectives.
+* Assign remediation actions for identified deficiencies.
+* Provide the completed DR test report for validation.
+
+### Closure Evidence
+
+* DR test report
+* Actual recovery results
+* RTO/RPO comparison
+* Identified exceptions
+* Remediation evidence
+* Follow-up validation
+
+The absence of test evidence should not automatically be interpreted as proof that the vendor has no disaster-recovery capability. The issue is that the capability has not been sufficiently demonstrated through current evidence.
