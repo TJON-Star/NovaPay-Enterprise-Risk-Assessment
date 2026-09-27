@@ -1,0 +1,32 @@
+**Now we create the control assessment.**
+
+For example:Risk: VTR-01Unauthorized access to NovaPay information through compromise of the vendor.
+
+**Potential controls:**
+| Control ID | Control Objective                                          | Evidence                                       | Status  |
+| ---------- | ---------------------------------------------------------- | ---------------------------------------------- | ------- |
+| VC-01      | Vendor requires MFA for privileged access                  | MFA configuration / policy                     | Pending |
+| VC-02      | Privileged access is restricted according to business need | Access-control policy + access review evidence | Pending |
+| VC-03      | Vendor reviews privileged access periodically              | Access review records                          | Pending |
+| VC-04      | Vendor monitors security-relevant authentication events    | Logging evidence                               | Pending |
+| VC-05      | Vendor maintains an incident-response capability           | IR plan + test evidence                        | Pending |
+
+**GRC terminology: Risk → Control Objective → Control → Evidence → Test Result → Finding**
+
+Suppose PayLink gives us an Access Control Policy.
+
+That proves: A policy exists.
+
+**It does not automatically prove: The control is implemented effectively.**
+
+**We therefore distinguish:**
+
+Design evidence: Does the control exist and is it appropriately designed?
+
+Operating evidence: Is the control actually operating?
+
+For example: Access reviews occur quarterly.
+
+Design evidence might be the access-control policy.
+
+**Operating evidence would be actual quarterly access-review records.**
