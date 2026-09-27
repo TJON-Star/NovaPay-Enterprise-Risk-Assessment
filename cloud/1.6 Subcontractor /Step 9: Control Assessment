@@ -1,0 +1,21 @@
+**Let's take five controls first.**
+
+| Control                                                          | Evidence      | Assessment                                                       | Effectiveness                  |
+| ---------------------------------------------------------------- | ------------- | ---------------------------------------------------------------- | ------------------------------ |
+| MFA is required for privileged access                            | EV-04         | Policy requires MFA                                              | Partially Effective            |
+| Privileged access is reviewed periodically                       | EV-05         | Review exists, but one dormant privileged account remains active | Partially Effective            |
+| Critical vulnerabilities are remediated within defined timelines | EV-07         | Two critical vulnerabilities exceeded the remediation target     | Partially Effective            |
+| Security incidents are formally managed                          | EV-09 + EV-10 | IR plan exists and exercise was performed                        | Effective                      |
+| Disaster recovery capability is tested                           | EV-13         | No recent DR test evidence supplied                              | **Ineffective / Evidence Gap** |
+
+**Notice the distinction.**
+
+For MFA, we haven't proven that MFA is actually enforced across the environment. We only know the policy requires it.
+
+For vulnerability management, the control exists, but operating evidence shows that remediation performance isn't consistently meeting the defined requirement.
+
+For DR, the problem isn't necessarily that PayLink has no disaster recovery capability. The problem is:
+
+**NovaPay currently cannot establish that the capability has been tested.**
+
+**That distinction matters.**
