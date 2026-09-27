@@ -1,30 +1,7 @@
 This is where this project connects directly back to ** NovaPay risk dashboard.**
 
-**WeTake: VTR-06: Vendor outage disrupts payment processing**
+* WeTake: 
 
-- Initial assessment: Likelihood = 4 X Impact = 5 = 20
-
-- Inherent Risk = 20 → Critical
-
-**Now suppose PayLink has:**
-
-- documented business continuity plan
-- defined RTO/RPO
-- SLA
-- incident response capability
-
-But:
-
-**DR testing evidence is missing.**
-
-**We don't magically reduce the risk to Low because documents exist.**
-
-For example, after evaluating the available evidence:
-
-Likelihood = 3 X Impact = 5 = 15
-
-Residual Risk = 15 → High
-
-**So the risk pathway becomes: Critical Inherent Risk (20) → Controls assessed → Residual Risk High (15) → Remediation Required**
+** VTR-03 → Vendor outage disrupts critical payment services → Inherent 20 Critical → Control assessment → Residual 15 High → Remediation required **
 
 **This is a much stronger STORY than: "Vendor assessed and compliant."**
