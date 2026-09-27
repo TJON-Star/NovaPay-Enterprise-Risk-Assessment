@@ -1,0 +1,22 @@
+| ID    | Risk Area                       | Evidence Requested                                          | Why NovaPay Needs It                                                     | Review Status |
+| ----- | ------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------ | ------------- |
+| DD-01 | Information Security Governance | Information Security Policy / ISMS documentation            | Establishes whether security governance is formally defined              | Pending       |
+| DD-02 | Independent Assurance           | ISO 27001 certificate and scope, or SOC 2 report            | Provides independent evidence of the vendor's control environment        | Pending       |
+| DD-03 | Access Control                  | Access Control Policy + privileged-access procedure         | Determines how vendor access is controlled                               | Pending       |
+| DD-04 | Authentication                  | MFA / authentication standard                               | Determines whether strong authentication is implemented                  | Pending       |
+| DD-05 | Vulnerability Management        | Vulnerability Management Policy + latest assessment summary | Addresses exposure from known vulnerabilities                            | Pending       |
+| DD-06 | Penetration Testing             | Recent penetration-test executive summary                   | Provides evidence of security testing                                    | Pending       |
+| DD-07 | Incident Response               | Incident Response Plan + notification procedure             | Determines how security incidents are detected, handled and communicated | Pending       |
+| DD-08 | Logging & Monitoring            | Logging/monitoring policy + sample control evidence         | Determines whether security events can be detected and investigated      | Pending       |
+| DD-09 | Business Continuity             | Business Continuity Plan                                    | Determines how critical services are maintained during disruption        | Pending       |
+| DD-10 | Disaster Recovery               | DR plan + evidence of recent DR testing                     | Tests whether recovery capability exists beyond documentation            | Pending       |
+| DD-11 | Data Protection                 | Data handling / classification policy                       | Establishes how NovaPay information is protected                         | Pending       |
+| DD-12 | Data Retention                  | Data retention and secure disposal policy                   | Addresses unauthorized or excessive retention                            | Pending       |
+| DD-13 | Encryption                      | Encryption standard / architecture summary                  | Determines protection of sensitive information in transit and at rest    | Pending       |
+| DD-14 | Subcontractors                  | Fourth-party / subcontractor register                       | Identifies additional entities introducing supply-chain risk             | Pending       |
+| DD-15 | Security Responsibilities       | Contract security clauses / DPA / security schedule         | Establishes contractual security obligations                             | Pending       |
+| DD-16 | Service Availability            | SLA and availability commitments                            | Establishes expectations for critical service availability               | Pending       |
+| DD-17 | Recovery                        | RTO/RPO documentation                                       | Determines expected recovery capability                                  | Pending       |
+| DD-18 | Security Contacts               | Security incident escalation contacts                       | Establishes an operational escalation path                               | Pending       |
+
+
