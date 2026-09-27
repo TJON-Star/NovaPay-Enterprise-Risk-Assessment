@@ -1,0 +1,13 @@
+Let's simulate the first five pieces of evidence.
+
+Suppose PayLink provides:
+
+ISO 27001 certificate: Received
+Access Control Policy: Received
+Penetration Test: Received
+Incident Response Plan: Received
+DR test evidence: Not provided
+
+**We don't immediately declare the vendor compliant.**
+
+We assess each item.
