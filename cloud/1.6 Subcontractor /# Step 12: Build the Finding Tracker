@@ -1,0 +1,182 @@
+# Step 12: Build the Finding Tracker
+
+The finding tracker converts the assessment results into an accountable remediation process.
+
+A finding should not simply remain "Open." The tracker should allow NovaPay to determine:
+
+* what risk the finding relates to
+* which control failed or has an evidence gap
+* who owns remediation
+* what action is required
+* when remediation is due
+* what residual risk remains
+* what evidence is required for closure
+* whether remediation has been independently validated
+
+The lifecycle is:
+
+**Identify → Assess → Evidence → Test → Find → Remediate → Re-test → Reassess → Close**
+
+## Finding Tracker
+
+| Finding ID | Linked Risk    | Linked Control(s)   | Severity | Treatment | Owner            | Remediation                                                                                      | Due Date | Current Status | Target Residual Risk | Closure Evidence                                                   |
+| ---------- | -------------- | ------------------- | -------- | --------- | ---------------- | ------------------------------------------------------------------------------------------------ | -------- | -------------- | -------------------- | ------------------------------------------------------------------ |
+| VTF-01     | VTR-04         | VC-01, VC-02, VC-03 | High     | Mitigate  | PayLink Security | Remove dormant privileged account and strengthen privileged-access review/deprovisioning         | TBD      | Open           | Medium               | Account removal evidence, updated access review and follow-up test |
+| VTF-02     | VTR-05         | VC-04               | High     | Mitigate  | PayLink Security | Remediate overdue critical vulnerabilities and establish documented exception/escalation process | TBD      | Open           | Medium               | Updated vulnerability assessment and remediation evidence          |
+| VTF-03     | VTR-03, VTR-10 | VC-08, VC-09, VC-14 | High     | Mitigate  | PayLink BCM/IT   | Conduct DR test, document results and address recovery deficiencies                              | TBD      | Open           | Medium               | DR test report, RTO/RPO results and remediation evidence           |
+
+## Finding VTF-01: Privileged Access Control Weakness
+
+**Linked Risk:** VTR-04
+**Severity:** High
+**Treatment:** Mitigate
+**Owner:** PayLink Security
+
+### Required remediation
+
+* Disable the unnecessary privileged account.
+* Confirm account removal through access-management evidence.
+* Review privileged accounts for similar exceptions.
+* Strengthen the periodic privileged-access review process.
+* Define escalation requirements for unresolved access exceptions.
+
+### Closure evidence
+
+NovaPay should obtain:
+
+* evidence that the account was disabled or removed
+* updated privileged-account listing
+* completed access review
+* evidence that identified exceptions were addressed
+
+The finding should not be closed solely because PayLink states that the account has been removed.
+
+## Finding VTF-02: Vulnerability Remediation Delays
+
+**Linked Risk:** VTR-05
+**Severity:** High
+**Treatment:** Mitigate
+**Owner:** PayLink Security
+
+### Required remediation
+
+* Remediate the two overdue critical vulnerabilities.
+* Perform validation scanning or equivalent verification.
+* Document any remaining exceptions.
+* Establish a formal exception and escalation process for vulnerabilities that exceed remediation timelines.
+* Introduce management monitoring of overdue critical vulnerabilities.
+
+### Closure evidence
+
+NovaPay should obtain:
+
+* updated vulnerability assessment or scan results
+* remediation records
+* evidence that the critical vulnerabilities are resolved or formally excepted
+* evidence of management escalation where applicable
+
+The finding should remain open until remediation has been validated.
+
+## Finding VTF-03: Disaster Recovery Testing Evidence Gap
+
+**Linked Risks:** VTR-03 and VTR-10
+**Severity:** High
+**Treatment:** Mitigate
+**Owner:** PayLink BCM/IT
+
+### Required remediation
+
+* Conduct a documented DR test covering services supporting NovaPay.
+* Record the test scenario and scope.
+* Measure actual recovery performance against defined RTO/RPO.
+* Document failures, exceptions and remediation actions.
+* Provide the completed DR test report to NovaPay.
+
+### Closure evidence
+
+NovaPay should obtain:
+
+* completed DR test report
+* actual recovery results
+* RTO/RPO comparison
+* identified exceptions
+* remediation actions
+* evidence that material deficiencies have been addressed
+
+The absence of previous testing evidence should not automatically be interpreted as proof that PayLink has no recovery capability. The issue is that NovaPay currently lacks sufficient evidence to establish operating effectiveness.
+
+## Reassessment Requirement
+
+Once remediation evidence is received, the relevant controls must be re-tested.
+
+The process should therefore be:
+
+**Finding Open**
+
+↓
+
+**Remediation Completed**
+
+↓
+
+**Evidence Submitted**
+
+↓
+
+**Evidence Validated**
+
+↓
+
+**Control Re-tested**
+
+↓
+
+**Residual Risk Reassessed**
+
+↓
+
+**Finding Closed or Escalated**
+
+A remediation claim without supporting evidence should not automatically result in closure.
+
+## Risk Acceptance and Escalation
+
+If PayLink cannot remediate a finding within the required timeframe, the finding should not simply be marked closed.
+
+The issue should instead be:
+
+* escalated to the appropriate risk owner
+* documented as an accepted or formally managed risk where authorized
+* assigned an approved expiry/review date
+* supported by compensating controls where applicable
+* monitored until the underlying exposure is resolved
+
+The GRC function facilitates assessment, evidence validation, tracking and escalation. Formal acceptance of business risk should remain with the appropriately authorized risk owner.
+
+## Final Tracker Principle
+
+The finding tracker is not just a list of weaknesses.
+
+It is the mechanism that demonstrates that NovaPay can move from:
+
+**Risk identification**
+
+to
+
+**Control assessment**
+
+to
+
+**Finding**
+
+to
+
+**Remediation**
+
+to
+
+**Evidence validation**
+
+to
+
+**Residual-risk reassess**

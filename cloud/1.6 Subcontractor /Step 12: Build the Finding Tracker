@@ -1,7 +1,0 @@
-| Finding ID | Risk                                      | Severity | Owner            | Remediation                                                       | Due Date | Status |
-| ---------- | ----------------------------------------- | -------- | ---------------- | ----------------------------------------------------------------- | -------- | ------ |
-| VTF-01     | Excessive privileged access               | High     | PayLink Security | Remove dormant privileged account and strengthen access review    | TBD      | Open   |
-| VTF-02     | Critical vulnerability remediation delays | High     | PayLink Security | Remediate overdue vulnerabilities and establish exception process | TBD      | Open   |
-| VTF-03     | DR testing evidence gap                   | High     | PayLink BCM/IT   | Perform DR test and provide evidence                              | TBD      | Open   |
-
-This gives a proper lifecycle: Identify → Assess → Evidence → Test → Find → Remediate → Reassess
