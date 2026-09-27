@@ -18,8 +18,8 @@ Risk acceptance must be formally authorised and time-bound.
 
 | Finding ID | Risk ID | Inherent Risk | Current Residual Risk | Finding Severity | Risk Owner                 | Remediation Owner | Treatment | Status | Due Date | Closure Evidence                                                       |
 | ---------- | ------- | ------------- | --------------------- | ---------------- | -------------------------- | ----------------- | --------- | ------ | -------- | ---------------------------------------------------------------------- |
-| VTF-01     | VTR-04  | 15 High       | 15 High               | High             | NovaPay Risk Owner         | PayLink Security  | Mitigate  | Open   | TBD      | Account removal evidence, updated access review, follow-up test        |
-| VTF-02     | VTR-05  | 16 High       | 16 High               | High             | NovaPay Risk Owner         | PayLink Security  | Mitigate  | Open   | TBD      | Vulnerability remediation evidence, updated assessment, follow-up test |
+| VTF-01     | VTR-05  | 15 High       | 15 High               | High             | NovaPay Risk Owner         | PayLink Security  | Mitigate  | Open   | TBD      | Account removal evidence, updated access review, follow-up test        |
+| VTF-02     | VTR-04  | 16 High       | 16 High               | High             | NovaPay Risk Owner         | PayLink Security  | Mitigate  | Open   | TBD      | Vulnerability remediation evidence, updated assessment, follow-up test |
 | VTF-03     | VTR-03  | 20 Critical   | 20 Critical           | High             | NovaPay Service/Risk Owner | PayLink BCM/IT    | Mitigate  | Open   | TBD      | DR test report, RTO/RPO results, remediation evidence                  |
 | VTF-03     | VTR-10  | 15 High       | 15 High               | High             | NovaPay Risk Owner         | PayLink BCM/IT    | Mitigate  | Open   | TBD      | DR test report, recovery results, remediation evidence                 |
 
@@ -55,7 +55,7 @@ The NovaPay assessor should verify that:
 
 The finding should only be closed after remediation evidence has been reviewed and the control has been validated.
 
-The linked VTR-04 risk should then be reassessed.
+The linked VTR-05 risk should then be reassessed.
 
 ---
 
@@ -82,7 +82,7 @@ The assessor should confirm that:
 
 The finding should only be closed after remediation evidence and follow-up testing support closure.
 
-VTR-05 should then be reassessed.
+VTR-04 should then be reassessed.
 
 ---
 
