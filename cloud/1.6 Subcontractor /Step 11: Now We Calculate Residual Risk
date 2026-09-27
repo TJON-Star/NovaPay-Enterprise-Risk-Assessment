@@ -1,154 +1,155 @@
-# Step 11: Now We Calculate Residual Risk
+Residual risk represents the risk remaining after considering controls that are actually supported by sufficient evidence.
 
-This is where the third-party risk assessment connects the control assessment and findings back to the original risk register.
+A control should not automatically reduce the risk rating merely because a policy, procedure or contractual requirement exists.
 
-The important principle is:
+The assessment therefore distinguishes between:
 
-**Residual risk is not automatically reduced simply because controls or policies exist.**
+* Inherent risk: risk before considering controls.
+* Current residual risk: risk after considering controls that can be reasonably relied upon based on available evidence.
+* Target residual risk: risk expected after remediation has been completed and independently validated.
 
-The residual rating should reflect the control environment supported by the evidence actually available at the time of assessment.
+## Residual Risk Methodology
 
-## VTR-03: Vendor Outage Disrupts Critical Payment Services
+Risk is calculated using:
 
-### 1. Inherent Risk
+**Risk Score = Likelihood × Impact**
 
-Before considering controls:
+Likelihood:
 
-**Likelihood = 4**
-**Impact = 5**
+1. Rare
+2. Unlikely
+3. Possible
+4. Likely
+5. Almost Certain
 
-**Risk Score = 4 × 5 = 20**
+Impact:
 
-**Inherent Risk = Critical**
+1. Insignificant
+2. Minor
+3. Moderate
+4. Major
+5. Severe
 
-The risk is critical because PayLink supports payment-processing and transaction-routing services that are highly dependent on service availability.
+Risk classification:
 
-### 2. Relevant Controls
+* 1–5: Low
+* 6–11: Medium
+* 12–19: High
+* 20–25: Critical
 
-The assessment identified the following controls relevant to this risk:
+A reduction in likelihood or impact must have an evidence-based rationale.
 
-* Business Continuity Plan
-* Service Level Agreement
-* Defined Recovery Time Objective (RTO)
-* Defined Recovery Point Objective (RPO)
-* Incident response capability
-* Disaster recovery capability and testing
+The existence of a BCP, SLA, RTO or RPO does not automatically reduce the likelihood of a vendor outage. These controls primarily establish requirements and recovery expectations. Their effectiveness in reducing business consequences must be demonstrated through operating evidence and testing.
 
-Evidence reviewed included:
+## VTR-03: Vendor Outage Disrupts Payment Services
 
-* EV-09 Incident Response Plan
-* EV-12 Business Continuity Plan
-* EV-17 SLA
-* EV-18 RTO/RPO documentation
-* EV-13 Disaster Recovery Test Report
+### Inherent Risk
 
-EV-13 was not provided.
+Likelihood: 4
+Impact: 5
 
-### 3. Control Assessment
+**Inherent Risk Score: 20, Critical**
 
-The available evidence demonstrates that PayLink has documented continuity and recovery requirements.
+The risk reflects the criticality of PayLink to NovaPay payment-processing operations and the potential consequences of a significant vendor outage.
 
-However, the absence of recent disaster recovery testing evidence means NovaPay cannot independently establish that the documented recovery capability operates effectively under realistic disruption conditions.
+### Relevant Controls
 
-Therefore, the controls provide risk reduction, but confidence in their operating effectiveness is limited.
+* VC-08: Service continuity
+* VC-09: Disaster recovery testing
+* VC-13: Availability expectations
+* VC-14: Recovery objectives
 
-### 4. Residual Risk Assessment
+### Evidence
 
-Based on the available evidence:
+* EV-12: Business Continuity Plan
+* EV-17: SLA
+* EV-18: RTO/RPO documentation
+* EV-13: DR Test Report not provided
 
-**Likelihood = 3**
-**Impact = 5**
+### Control Assessment
 
-**Residual Risk Score = 3 × 5 = 15**
+The submitted evidence demonstrates that continuity expectations, contractual availability requirements and recovery objectives have been documented.
 
-**Residual Risk = High**
+However, recent DR testing has not been demonstrated.
 
-The impact remains at 5 because a major outage affecting critical payment-processing services could still have severe business consequences.
+As a result, NovaPay cannot establish with sufficient confidence that the documented recovery capability will perform as required during a material disruption.
 
-The likelihood is reduced from 4 to 3 because documented continuity, SLA and recovery requirements provide some preventive and recovery capability.
+### Current Residual Risk
 
-However, the likelihood is not reduced further because recent DR testing has not been demonstrated.
+Because the available evidence does not justify a defensible reduction in the risk score, the current residual risk remains:
 
-### 5. Risk Pathway
+**Likelihood: 4**
+**Impact: 5**
+**Current Residual Risk: 20, Critical**
 
-The assessment therefore follows this pathway:
+This does not mean that the vendor has no recovery capability.
 
-**VTR-03**
+It means that the available evidence is insufficient to justify reducing the risk rating.
 
-**Inherent Risk: 20 Critical**
+This is a deliberate conservative treatment of an evidence gap.
 
-↓
+### Treatment
 
-**Controls assessed**
+**Mitigate**
 
-↓
+The vendor should conduct and document a DR test covering the services supporting NovaPay.
 
-**Control weakness / evidence gap identified**
+The test should:
 
-↓
+1. Define the disruption scenario.
+2. Identify affected services and dependencies.
+3. Measure actual recovery performance.
+4. Compare actual results against RTO/RPO.
+5. Document exceptions.
+6. Assign remediation actions.
+7. Provide evidence for independent validation.
 
-**Residual Risk: 15 High**
+### Target Residual Risk
 
-↓
+No numerical target residual risk is assigned at this stage.
 
-**Remediation Required**
+The target risk should be recalculated after remediation evidence has been received and validated.
 
-↓
+This prevents the assessment from assuming that successful remediation will automatically reduce likelihood or impact by a predetermined amount.
 
-**DR testing and evidence validation**
+## VTR-10: Vendor Lacks Effective Recovery Capability
 
-↓
+VTR-10 addresses a related but distinct scenario: the vendor may be unable to recover effectively after a disruption.
 
-**Residual risk reassessment**
+**Inherent Risk:**
 
-### 6. Treatment
+Likelihood: 3
+Impact: 5
+Score: 15, High
 
-**Treatment:** Mitigate
+The same DR evidence gap affects this risk.
 
-Required remediation:
+Until the recovery capability is tested and the results validated, the assessment should not assume that the missing evidence represents a successful control.
 
-1. Conduct a documented disaster recovery test covering services supporting NovaPay.
-2. Record the test scenario, scope, results, recovery times and identified exceptions.
-3. Compare actual recovery performance against the defined RTO/RPO.
-4. Document remediation actions for any failed or partially achieved recovery objectives.
-5. Provide the completed DR test report to NovaPay.
-6. Reassess the residual risk after the remediation evidence has been reviewed.
+**Current Residual Risk: 15, High, pending validation.**
 
-### 7. Target Residual Risk
+Following the DR test, VTR-10 should be reassessed independently using the same approved scoring methodology.
 
-The target residual risk is:
+## Important Risk Assessment Principle
 
-**Likelihood = 2**
-**Impact = 5**
+The finding and the risk are not the same thing.
 
-**Target Score = 2 × 5 = 10**
+VTF-03 is a finding concerning insufficient evidence of disaster recovery testing.
 
-**Target Residual Risk = Medium**
+VTR-03 is the risk that a vendor outage disrupts payment services.
 
-This is a target state, not the current assessment result.
+VTR-10 is the risk that the vendor cannot effectively recover after a disruption.
 
-The target should only be adopted after NovaPay reviews satisfactory evidence demonstrating that the recovery capability has been tested and identified deficiencies have been addressed.
+One finding can therefore affect more than one risk, but each risk must retain its own risk score and reassessment.
 
-## Important GRC Principle
+## Risk Reassessment Trigger
 
-Do not describe PayLink as "secure," "compliant," or "low risk" simply because policies, certifications or contractual documents exist.
+The residual risk should be reassessed when:
 
-The assessment should distinguish between:
+* DR test evidence is received.
+* Actual recovery performance is validated.
+* RTO/RPO performance is confirmed.
+* Exceptions are remediated or formally accepted.
+* Material changes occur to the vendor's service, architecture or dependencies.
 
-**Control documented**
-
-and
-
-**Control operating effectively**
-
-and
-
-**Control operating effectively with sufficient evidence**
-
-This distinction is particularly important for third-party risk because NovaPay may depend on controls that it does not directly operate.
-
-The current assessment therefore remains:
-
-**Critical Inherent Risk → Controls Assessed → High Residual Risk → Remediation Required → Reassessment**
-
-This provides a defensible risk-management trail rather than a simple vendor-compliance conclusion.
+The reassessment should document the evidence supporting any change to likelihood, impact or overall risk score.
