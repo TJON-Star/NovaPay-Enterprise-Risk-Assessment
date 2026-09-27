@@ -1,0 +1,96 @@
+# Step 14: Third-Party Risk Monitoring
+
+Third-party risk does not end when due diligence is completed. A vendor's risk profile can change after onboarding because of security incidents, overdue vulnerabilities, service outages, expired assurance, subcontractor changes, access changes or changes to the service itself.
+
+Step 14 converts the assessment into an ongoing monitoring process.
+
+## Monitoring Model
+
+**KRI → Threshold → Trigger → Action → Owner → Escalation → Risk Linkage → Reassessment**
+
+A threshold breach is a monitoring signal. It is not, by itself, evidence that the risk score should change. Any change to likelihood, impact or residual risk requires documented evidence and reassessment.
+
+## Monitoring Register
+
+| KRI | Measurement / Threshold | Linked Risk / Finding | Owner | Action / Escalation | Reassessment Trigger |
+| --- | --- | --- | --- | --- | --- |
+| Critical vulnerabilities overdue | Count > 0 | VTR-04 / VTF-02 | PayLink Security | Immediate security escalation and remediation tracking | Reassess VTR-04 if exposure persists or materially changes |
+| Material security incident affecting NovaPay | Any material incident | VTR-01, VTR-02, VTR-06 | Vendor Security / NovaPay Incident Management | Immediate notification, incident response and risk review | Event-driven reassessment of affected risks |
+| DR testing | Required test overdue | VTR-03, VTR-10 / VTF-03 / EXC-001 | PayLink BCM/IT | High-risk escalation and exception review | Reassess VTR-03 and VTR-10 when test evidence is validated |
+| Privileged-access review | Required review missed | VTR-05 / VTF-01 | PayLink Security | Security escalation and access remediation | Reassess VTR-05 after remediation evidence and follow-up testing |
+| SLA availability | Below contractual threshold | VTR-03 / VTR-02 | NovaPay Service Owner | Vendor performance review and contractual escalation | Reassess if failure is material or persistent |
+| Open High-severity findings | Beyond agreed remediation timeframe | VTF-01, VTF-02, VTF-03 | NovaPay Risk Owner | Management escalation and treatment review | Reassess linked risks after validation or material deterioration |
+| Security certification | Expired or scope no longer supports reliance | VTR-01, VTR-04, VTR-07 | Third-Party Risk / Compliance | Evidence request and reassessment | Event-driven reassessment of affected risk areas |
+
+## Periodic Monitoring
+
+Monitoring should occur at a defined frequency appropriate to vendor criticality.
+
+For a critical payment-processing vendor, the monitoring process should include regular review of:
+
+* open findings and overdue remediation;
+* critical vulnerabilities;
+* service availability and SLA performance;
+* security incidents;
+* DR and continuity testing;
+* certification and assurance status;
+* privileged-access review status;
+* material subcontractor or fourth-party changes.
+
+The exact frequency should be defined by NovaPay's TPRM policy. This portfolio assessment does not invent a mandatory frequency.
+
+## Event-Driven Monitoring
+
+Certain events should trigger an immediate review rather than waiting for the next scheduled cycle.
+
+Examples include:
+
+* material security incident;
+* critical vulnerability affecting the vendor service;
+* significant SLA or availability failure;
+* failed DR test or failure to meet RTO/RPO;
+* expired or materially changed certification scope;
+* material subcontractor change;
+* acquisition or ownership change;
+* material architecture or service change;
+* change in data processed or system access;
+* unresolved finding passing its approved remediation deadline.
+
+## Monitoring the Existing Exception
+
+EXC-001 is specifically monitored because the DR testing evidence gap remains open.
+
+A breach of the DR monitoring trigger should lead to:
+
+1. confirmation of the overdue status;
+2. escalation to the accountable owner;
+3. review of compensating controls;
+4. review of exception expiry or review date;
+5. consideration of further treatment or escalation;
+6. eventual reassessment of VTR-03 and VTR-10 when new evidence is validated.
+
+The exception does not automatically reduce either risk.
+
+## Reassessment Logic
+
+The monitoring process should distinguish between:
+
+**Signal:** a KRI crosses its threshold.
+
+**Escalation:** the accountable owner is notified and required action is initiated.
+
+**Finding:** a control weakness or evidence deficiency is formally recorded where appropriate.
+
+**Risk reassessment:** likelihood, impact or residual risk is reconsidered using current evidence.
+
+**Closure:** remediation and validation demonstrate that the issue has been appropriately addressed.
+
+This prevents the dashboard from treating every alert as an automatic risk-score change.
+
+## Key GRC Principle
+
+The objective of third-party monitoring is not simply to collect updated documents.
+
+It is to detect material changes early enough to trigger action before the vendor's risk posture deteriorates without management visibility.
+
+**Continuous monitoring closes the loop between the original assessment and the next risk decision.**
