@@ -20,7 +20,7 @@ Taiwo Johnson (TJON) | GRC and Compliance Analyst | ISO 27001, PCI-DSS, GDPR, NI
 
 NovaPay is a fictional payments company. This assessment evaluates PayLink Cloud Services Ltd., a critical vendor providing cloud-based payment API and transaction-processing infrastructure, ahead of onboarding.
 
-The assessment scored 10 vendor risks across the third-party risk domain. Three risks are rated Critical and seven are rated High, none Medium or Low. Of the 18 requested due-diligence evidence items, 17 were received; the one gap (disaster recovery test evidence) is the single largest driver of the current risk position. Five representative controls were tested in detail: one is fully effective, three are partially effective, and one has an unresolved evidence gap. Three findings remain open, all High severity, all routed to mitigation rather than acceptance.
+The assessment scored 10 vendor risks across the third-party risk domain. Three risks are rated Critical and seven are rated High, none Medium or Low. Of the 18 requested due-diligence evidence items, 17 were received; the one gap (disaster recovery test evidence) is the single largest driver of the current risk position. Five representative controls were tested in detail: one is fully effective, three are partially effective, and one has an unresolved evidence gap. Three findings remain open, all High severity, all routed to mitigation. No risk acceptance has been recorded. EXC-001 is a proposed exception pending formal approval.
 
 The dashboard exists to show the full evidence chain, not just a final rating: how a vendor moves from profile and criticality through inherent risk, evidence, control testing, findings, residual risk, treatment, and ongoing monitoring.
 
@@ -133,8 +133,8 @@ pie showData
 | Due-diligence evidence register | 18-item evidence tracker (collapsible) with per-item status |
 | Control assessment | Design vs. operating effectiveness for 5 tested controls |
 | Findings and remediation tracker | Inherent vs. current residual risk for each open finding |
-| Risk decision and acceptance | Treatment decisions and accountable owners |
-| Ongoing vendor monitoring | 7 KRIs with thresholds and escalation triggers |
+| Risk decision and acceptance | Treatment decisions, accountable owners, and proposed exception status |
+| Ongoing vendor monitoring | 7 KRIs with linked risks/findings, owners, thresholds, actions, escalation and reassessment triggers |
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#f59e42','primaryTextColor':'#111','primaryBorderColor':'#c2670a','lineColor':'#93a3c2','fontSize':'14px'}}}%%
@@ -160,11 +160,17 @@ The full risk register (`cloud/Risk Register`, `cloud/Vendor Risk Assessment`) l
 
 1. View the live dashboard: [tjon-star.github.io/NovaPay-Enterprise-Risk-Assessment](https://tjon-star.github.io/NovaPay-Enterprise-Risk-Assessment/)
 2. Or clone the repo and open `index.html` directly in a browser.
-3. Read through `cloud/1.6 Subcontractor/` for the full worked walkthrough, in order, from building the evidence matrix through risk acceptance and exception management.
+3. Read through `cloud/1.6 Subcontractor /` for the full worked walkthrough, in order, from building the evidence matrix through risk acceptance and exception management.
 
 ## Tech Stack
 
 Tools: HTML5, CSS3 (custom properties, no framework), GitHub Pages, Mermaid (diagrams, rendered natively by GitHub)
+
+## Step 14: Ongoing Third-Party Risk Monitoring
+
+The monitoring model links each KRI to a threshold, action, owner, escalation path and reassessment trigger. A threshold breach is a signal for review, not an automatic change to the risk score. Risk ratings change only after evidence-based reassessment.
+
+The seven monitored KRIs cover critical vulnerabilities, material security incidents, disaster recovery testing, privileged-access reviews, SLA availability, overdue high-severity findings, and security certification status. EXC-001 is monitored as an open proposed exception until its DR evidence gap is validated or the exception is formally approved, renewed or closed.
 
 ## Lessons Learned
 
