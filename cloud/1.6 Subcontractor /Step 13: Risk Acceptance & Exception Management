@@ -57,3 +57,9 @@ The current residual ratings remain unchanged because the available evidence doe
 The absence of DR testing evidence is therefore
 
 ** The existence of an exception does not make the underlying control effective. **
+
+** how do we make sure its risk does not quietly deteriorate six months later?” **
+
+A vendor can be acceptable today and become high-risk later because of a security incident, expired ISO certificate, new subcontractor, critical vulnerability, SLA failures, acquisition, architecture change, or change in the data it processes.
+
+** So TPRM is continuous. **
