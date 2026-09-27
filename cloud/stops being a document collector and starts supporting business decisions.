@@ -1,0 +1,209 @@
+NovaPay does not automatically reject PayLink because it has High residual risks. The question becomes whether the remaining exposure is understood, treated, monitored, and formally accepted by the appropriate risk owner.
+
+1. We start with the three findings
+
+**We currently have:**
+
+| Finding                                 | Initial Risk | Control Result             | Residual Risk |
+| --------------------------------------- | -----------: | -------------------------- | ------------: |
+| VTF-01 Excessive privileged access      |         High | Partially Effective        |          High |
+| VTF-02 Vulnerability remediation delays |         High | Partially Effective        |          High |
+| VTF-03 DR testing evidence gap          |         High | Ineffective / Evidence Gap |          High |
+
+**Now we ask the uncomfortable question: What happens if PayLink says, "We can't fix this immediately"?**
+
+**That's where risk treatment comes in.**
+
+2. Risk Treatment
+
+- We give management four basic treatment options:
+
+- Mitigate: Reduce likelihood or impact through additional controls.
+
+- Avoid: Stop or don't enter the risky activity/relationship.
+
+- Transfer/Share: Contractual, insurance or other mechanisms may shift some consequences, although they do not eliminate the underlying risk.
+
+- Accept: Deliberately retain the residual risk within an authorized risk appetite/tolerance.
+
+
+3. VTF-01: Privileged Access
+
+Current state:
+
+One dormant privileged account remains active.
+
+Treatment:
+
+Disable the account and introduce a documented privileged-access review process.
+
+Target:
+
+No unnecessary privileged accounts remain active.
+
+Residual likelihood after remediation:
+
+2
+
+Impact:
+
+5
+
+Residual score:
+
+10 → Medium
+
+So:
+
+15 High → 10 Medium
+
+That is a measurable risk reduction.
+
+But there's an important GRC lesson here:
+
+The impact didn't fall.
+
+If a compromised privileged account can still affect a critical payment environment, the potential consequence remains severe.
+
+We're reducing likelihood, not pretending the business impact disappeared.
+
+4. VTF-02: Vulnerability Remediation
+
+- Current problem: Two critical vulnerabilities exceeded PayLink's remediation target.
+
+- Treatment: Remediate the two vulnerabilities.
+
+- Establish escalation for overdue critical vulnerabilities.
+
+- Require documented risk acceptance for exceptions.
+
+- Add vulnerability metrics to vendor monitoring.
+
+Suppose the resulting assessment becomes:
+
+-Likelihood: 2 X Impact: 5 = 10 
+
+- Residual: 10 → Medium
+
+**Again: High → Medium**
+
+But now we have something even more useful:
+
+**A measurable remediation objective.**
+
+**We're no longer saying: "Vendor should improve vulnerability management."**
+
+**We're saying: "Critical vulnerabilities exceeding the agreed remediation threshold must either be remediated or formally escalated with documented risk acceptance."**
+
+That's much more defensible.
+
+5. VTF-03: Disaster Recovery
+
+This is the interesting one.
+
+**PayLink has:**
+
+- Business Continuity Plan
+- RTO/RPO documentation
+- SLA
+- Incident Response Plan
+
+**But it hasn't provided evidence that recovery capability has actually been tested.**
+
+So the question isn't: "Does PayLink have a DR plan?"
+
+**The question is: "Can NovaPay demonstrate that the vendor can recover the service within the required recovery objectives?"**
+
+Until evidence exists, we retain uncertainty.
+
+- Treatment: Conduct a DR test covering services supporting NovaPay and provide the resulting test report, including identified deficiencies and corrective actions.
+
+- Until that happens, we could retain: Residual Risk: High
+
+This finding therefore stays open.
+
+6. Now comes the management decision
+
+**Imagine PayLink tells NovaPay: "The DR test is scheduled for 60 days from now."**
+
+**NovaPay has a choice.**
+
+** It could: A. Reject onboarding until the evidence exists.
+
+Or:
+
+** B. Permit onboarding subject to conditions.**
+
+**For example:**
+
+Vendor may proceed under conditional approval provided that PayLink completes the DR test within 60 days, provides evidence to NovaPay, and escalates any material deficiencies immediately.
+
+That is risk-based decision-making.
+
+- You're not saying: "PayLink is safe."
+
+- You're saying: "We understand the remaining exposure and have established conditions for managing it."
+
+7. Risk Acceptance
+
+Here's the critical distinction.
+
+A GRC analyst should generally not personally accept business risk on behalf of management.
+
+Your job is to:
+
+- identify the risk
+- assess it
+- document the evidence
+- recommend treatment
+- track remediation
+- escalate when thresholds are exceeded
+
+** The appropriate business/risk owner decides whether the residual risk is acceptable within the organization's risk appetite and delegated authority.**
+
+**So our record look like:**
+| Risk                 | Residual | Treatment | Decision                                   | Decision Owner        |
+| -------------------- | -------- | --------- | ------------------------------------------ | --------------------- |
+| Privileged access    | Medium   | Mitigate  | Conditional acceptance pending remediation | Technology Risk Owner |
+| Vulnerability delays | Medium   | Mitigate  | Remediation required                       | Security Owner        |
+| DR testing gap       | High     | Mitigate  | Conditional approval with deadline         | Business Risk Owner   |
+
+For NovaPay, all three current findings should initially go through mitigation, not immediate acceptance.
+
+Why?
+
+**Because we have identified practical control improvements.**
+
+8. And here's the real twist
+
+- Suppose the business owner says: "PayLink is critical to our payment platform. We can't wait 60 days. Approve them anyway."
+- Taiwo Johnson says "The current residual risk is High because DR capability has not been evidenced. If management chooses to proceed before testing is completed, the decision should be documented as a time-bound risk acceptance or conditional approval, with an accountable risk owner, compensating measures, remediation deadline and escalation trigger."
+
+9. Our NovaPay Vendor Risk Lifecycle
+
+We now have:
+
+Vendor → PayLink Cloud Services Criticality → Critical, Inherent Risk → Critical, Due Diligence → Evidence collected, Control Assessment → Effective / Partially Effective / Ineffective, Findings
+→ 3 High findings, Treatment → Mitigation, Residual Risk → Medium / High, Decision → Conditional approval / remediation / risk acceptance, Monitoring → Ongoing
+
+And now we can add one final layer:
+
+10. Vendor Risk Monitoring
+
+We can establish KPIs/KRIs such as:
+
+| Metric                               | Threshold                   | Escalation             |
+| ------------------------------------ | --------------------------- | ---------------------- |
+| Critical vulnerabilities overdue     | >0                          | Immediate escalation   |
+| Security incidents affecting NovaPay | Any material incident       | Immediate notification |
+| DR testing                           | Overdue                     | High-risk escalation   |
+| Privileged-access review             | Missed review               | Security escalation    |
+| SLA availability                     | Below contractual threshold | Vendor review          |
+| Open High-risk findings              | > agreed timeframe          | Management escalation  |
+| Security certification               | Expired                     | Reassessment           |
+
+
+** Enterprise Risk Dashboard → Third-Party Risk → Due Diligence → Control Testing → Findings → Residual Risk → Risk Treatment → Vendor Monitoring **
+
+** That is the twist: the vendor isn't the final subject of the assessment. **
+** The real subject is whether NovaPay can make a defensible risk decision with incomplete information. **
