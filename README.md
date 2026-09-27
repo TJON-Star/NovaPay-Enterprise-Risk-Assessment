@@ -1,7 +1,7 @@
 # NovaPay Enterprise Risk Assessment
 
 [![View Live Dashboard](https://img.shields.io/badge/dashboard-live-4da3ff)](https://tjon-star.github.io/NovaPay-Enterprise-Risk-Assessment/)
-[![License](https://img.shields.io/badge/license-MIT-informational)](LICENSE)
+[![License](https://img.shields.io/badge/license-BSD--2--Clause-informational)](LICENSE)
 [![Status](https://img.shields.io/badge/vendor--risk%20module-complete-3ecf8e)](#scope)
 [![ISO 27001](https://img.shields.io/badge/ISO-27001-4da3ff)](#risk-rating-criteria)
 [![PCI DSS](https://img.shields.io/badge/PCI-DSS%20v4.0-4da3ff)](#risk-rating-criteria)
@@ -206,4 +206,4 @@ This is a portfolio project. It does not represent a live NovaPay production env
 
 ## License
 
-MIT License. See [LICENSE](LICENSE).
+BSD 2-Clause License. See [LICENSE](LICENSE).
