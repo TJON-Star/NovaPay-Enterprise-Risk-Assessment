@@ -62,6 +62,14 @@ tbody tr:hover{background:rgba(77,163,255,.05);}
 .b-gap{background:rgba(239,71,87,.16);color:var(--gap);}
 .b-open{background:rgba(147,163,194,.18);color:var(--muted);}
 .tablewrap{overflow-x:auto;}
+table.kri{min-width:900px;table-layout:fixed;}
+table.kri th:nth-child(1){width:16%;}
+table.kri th:nth-child(2){width:14%;}
+table.kri th:nth-child(3){width:14%;}
+table.kri th:nth-child(4){width:14%;}
+table.kri th:nth-child(5){width:21%;}
+table.kri th:nth-child(6){width:21%;}
+table.kri td{overflow-wrap:break-word;}
 .matrixbox{display:flex;justify-content:center;}
 svg text{fill:var(--text);font-family:inherit;}
 .legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:.75rem;color:var(--muted);}
@@ -296,7 +304,7 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
   <h2>Ongoing Vendor Monitoring — KRIs</h2>
   <p class="sub">Monitoring connects measurable signals to risk, findings, ownership, escalation and reassessment. Threshold breaches do not automatically change a risk score; they trigger review and evidence-based reassessment.</p>
   <div class="tablewrap">
-  <table>
+  <table class="kri">
     <tr><th>KRI</th><th>Measurement / Threshold</th><th>Linked Risk / Finding</th><th>Owner</th><th>Action / Escalation</th><th>Reassessment Trigger</th></tr>
     <tr><td>Critical vulnerabilities overdue</td><td>Count &gt; 0</td><td>VTR-04 / VTF-02</td><td>PayLink Security</td><td>Immediate security escalation; remediation tracking</td><td>Reassess VTR-04 if overdue exposure persists or materially changes</td></tr>
     <tr><td>Material security incidents affecting NovaPay</td><td>Any material incident</td><td>VTR-01, VTR-02, VTR-06</td><td>Vendor Security / NovaPay Incident Management</td><td>Immediate notification, incident response and risk review</td><td>Event-driven reassessment of affected risks</td></tr>
