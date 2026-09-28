@@ -5,10 +5,10 @@
 [![Status](https://img.shields.io/badge/vendor--risk%20module-complete-3ecf8e)](#scope)
 [![ISO 27001](https://img.shields.io/badge/ISO-27001-4da3ff)](#risk-rating-criteria)
 [![PCI DSS](https://img.shields.io/badge/PCI-DSS%20v4.0-4da3ff)](#risk-rating-criteria)
-[![NIST CSF](https://img.shields.io/badge/NIST-CSF-4da3ff)](#risk-rating-criteria)
+[![NIST CSF 2.0](https://img.shields.io/badge/NIST-CSF-4da3ff)](#risk-rating-criteria)
 [![SOC 2](https://img.shields.io/badge/SOC-2-4da3ff)](#risk-rating-criteria)
 
-Interactive third-party/vendor risk dashboard for NovaPay, a fictional payments company, built to demonstrate end-to-end GRC methodology: inherent risk scoring, due-diligence evidence review, control testing, findings and remediation tracking, and ongoing vendor monitoring.
+Interactive third-party/vendor risk dashboard for NovaPay, a fictional payments company, built to demonstrate an end-to-end Third-Party Risk Management (TPRM) workflow: vendor criticality, inherent risk scoring, due-diligence evidence review, control testing, findings and remediation tracking, risk treatment, exception management, and ongoing vendor monitoring.
 
 <img src="./Screenshot_Overview_NovaPay%20Third-Party%20%20Vendor%20Risk%20Dashboard.jpeg" width="640">
 
@@ -43,6 +43,12 @@ The following assumptions underpin the assessment and dashboard:
 3. Where evidence was not supplied (the disaster recovery test report), the assessment does not assume the underlying control is absent or ineffective. It withholds a risk-reducing credit until the evidence exists. This is a deliberate conservative treatment of uncertainty, not a finding of failure.
 4. Risk scores reflect a qualitative 5x5 likelihood/impact model, not a probabilistic or financial estimate.
 5. The assessment reflects a single point in time. Vendor risk is treated as continuous in principle, but this dashboard does not auto-refresh.
+
+## Framework and Assessment Boundary
+
+ISO 27001, PCI DSS v4.0.1, NIST CSF 2.0, GDPR, and SOC 2 are used as illustrative reference points for evidence and control evaluation. This portfolio project is not a formal ISO 27001 certification assessment, PCI DSS assessment, SOC 2 examination, GDPR compliance audit, or independent assurance engagement. No real vendor evidence was independently validated.
+
+The project demonstrates TPRM methodology rather than claiming compliance with any of these frameworks.
 
 ## Risk Rating Criteria
 
@@ -134,7 +140,7 @@ pie showData
 | Control assessment | Design vs. operating effectiveness for 5 tested controls |
 | Findings and remediation tracker | Inherent vs. current residual risk for each open finding |
 | Risk decision and acceptance | Treatment decisions, accountable owners, and proposed exception status |
-| Ongoing vendor monitoring | 7 KRIs with linked risks/findings, owners, thresholds, actions, escalation and reassessment triggers |
+| Ongoing vendor monitoring model | 7 KRIs with linked risks/findings, owners, thresholds, actions, escalation and reassessment triggers |
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#f59e42','primaryTextColor':'#111','primaryBorderColor':'#c2670a','lineColor':'#93a3c2','fontSize':'14px'}}}%%
@@ -166,7 +172,7 @@ The full risk register (`cloud/Risk Register`, `cloud/Vendor Risk Assessment`) l
 
 Tools: HTML5, CSS3 (custom properties, no framework), GitHub Pages, Mermaid (diagrams, rendered natively by GitHub)
 
-## Step 14: Ongoing Third-Party Risk Monitoring
+## Step 14: Ongoing Third-Party Risk Monitoring Model
 
 The monitoring model links each KRI to a threshold, action, owner, escalation path and reassessment trigger. A threshold breach is a signal for review, not an automatic change to the risk score. Risk ratings change only after evidence-based reassessment.
 
@@ -208,7 +214,7 @@ The seven monitored KRIs cover critical vulnerabilities, material security incid
 
 ## Disclaimer
 
-This is a portfolio project. It does not represent a live NovaPay production environment. See [SECURITY.md](SECURITY.md) for the full scope statement and responsible disclosure process.
+This is a portfolio project. It does not represent a live NovaPay production environment or a formal compliance assessment. See [SECURITY.md](SECURITY.md) for the full scope statement and responsible disclosure process.
 
 ## License
 
