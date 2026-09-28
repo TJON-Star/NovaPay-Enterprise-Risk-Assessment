@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-BSD--2--Clause-informational)](LICENSE)
 [![Status](https://img.shields.io/badge/vendor--risk%20module-complete-3ecf8e)](#scope)
 [![ISO 27001](https://img.shields.io/badge/ISO-27001-4da3ff)](#risk-rating-criteria)
-[![PCI DSS](https://img.shields.io/badge/PCI-DSS%20v4.0-4da3ff)](#risk-rating-criteria)
+[![PCI DSS](https://img.shields.io/badge/PCI-DSS%20v4.0.1-4da3ff)](#risk-rating-criteria)
 [![NIST CSF 2.0](https://img.shields.io/badge/NIST-CSF-4da3ff)](#risk-rating-criteria)
 [![SOC 2](https://img.shields.io/badge/SOC-2-4da3ff)](#risk-rating-criteria)
 
@@ -14,7 +14,7 @@ Interactive third-party/vendor risk dashboard for NovaPay, a fictional payments 
 
 ## Author
 
-Taiwo Johnson (TJON) | GRC and Compliance Analyst | ISO 27001, PCI-DSS, GDPR, NIST CSF, SOC 2 | Third-Party Risk Management
+Taiwo Johnson (TJON) | GRC and Compliance Analyst | TPRM | ISO 27001 | PCI DSS v4.0.1 | NIST CSF 2.0 | GDPR | SOC 2
 
 ## Executive Summary
 
