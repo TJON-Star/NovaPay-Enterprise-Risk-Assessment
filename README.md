@@ -44,11 +44,41 @@ The following assumptions underpin the assessment and dashboard:
 4. Risk scores reflect a qualitative 5x5 likelihood/impact model, not a probabilistic or financial estimate.
 5. The assessment reflects a single point in time. Vendor risk is treated as continuous in principle, but this dashboard does not auto-refresh.
 
-## Framework and Assessment Boundary
+## Assessment Boundary & Framework References
 
-ISO 27001, PCI DSS v4.0.1, NIST CSF 2.0, GDPR, and SOC 2 are used as illustrative reference points for evidence and control evaluation. This portfolio project is not a formal ISO 27001 certification assessment, PCI DSS assessment, SOC 2 examination, GDPR compliance audit, or independent assurance engagement. No real vendor evidence was independently validated.
+### Assessment boundary
 
-The project demonstrates TPRM methodology rather than claiming compliance with any of these frameworks.
+This portfolio assessment is limited to a single representative critical third-party relationship: PayLink Cloud Services Ltd. The worked example covers the third-party risk lifecycle from inherent risk identification through due diligence, evidence review, control assessment, findings, risk treatment, exception management, and ongoing monitoring.
+
+**In scope**
+- Third-party/vendor risk scenarios and 5x5 inherent risk scoring
+- Vendor due-diligence evidence requests and evidence-status tracking
+- Representative control assessment and identification of evidence gaps
+- Findings, remediation tracking, risk linkage, and residual-risk treatment
+- Risk decision and exception workflow, including proposed exception EXC-001
+- KRIs, thresholds, escalation triggers, and reassessment requirements
+
+**Out of scope**
+- A full enterprise risk assessment across all risk domains
+- A formal certification, attestation, audit, examination, or independent assurance engagement
+- Independent validation of a real vendor's controls or evidence
+- Legal advice or a determination of GDPR compliance
+- A PCI DSS assessment of NovaPay or PayLink
+- A SOC 2 examination or opinion on service-organization controls
+
+All vendor, risk, evidence, control, and finding data in this project is simulated. The assessment therefore demonstrates a repeatable TPRM methodology rather than making a claim about a real organization's compliance posture.
+
+### Framework references
+
+| Reference | How it is used in this project |
+| --- | --- |
+| **ISO/IEC 27001** | Reference point for information-security governance, control evidence, scope validation, and control-effectiveness discussions. |
+| **PCI DSS v4.0.1** | Reference point for payment-security evidence, third-party responsibilities, and validation of current AOC/ROC scope where applicable. |
+| **NIST CSF 2.0** | Reference point for organizing cybersecurity risk and control discussions across governance, identification, protection, detection, response, and recovery concepts. |
+| **GDPR** | Reference point for data-protection and security-of-processing considerations where vendor handling of personal data is relevant. |
+| **SOC 2** | Reference point for interpreting service-organization control evidence and the distinction between assurance evidence and actual control effectiveness. |
+
+These references inform the assessment design; they do not mean NovaPay or PayLink has been certified, attested, audited, or found compliant with any of them.
 
 ## Risk Rating Criteria
 
