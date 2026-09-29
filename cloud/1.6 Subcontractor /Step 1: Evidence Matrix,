@@ -1,14 +1,14 @@
 | Capability                  | Evidence                                                                                      | Assessment                    |
 | --------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------- |
-| Risk Management             | 20-risk register, 5×5 methodology, treatment tracking, residual-risk concept                  | **Strong portfolio evidence** |
+| Risk Management             | 11-risk register, 5×5 methodology, treatment tracking, residual-risk concept                  | **Strong portfolio evidence** |
 | Information Security Risk   | Payment-processing risks, privileged access, vulnerabilities, logging/monitoring, cloud risks | **Strong portfolio evidence** |
 | ISO 27001                   | ISO 27001:2022 mapping                                                                        | **Strong portfolio evidence** |
-| PCI DSS                     | PCI-DSS v4.0 mapping                                                                          | **Strong portfolio evidence** |
+| PCI DSS                     | PCI DSS v4.0.1 mapping                                                                          | **Strong portfolio evidence** |
 | Compliance                  | ISO 27001 + PCI-DSS + NDPR obligations                                                        | **Strong portfolio evidence** |
-| Risk Reporting              | Power BI executive dashboard                                                                  | **Strong portfolio evidence** |
+| Risk Reporting              | HTML executive dashboard with risk, evidence, control and monitoring views                                                                  | **Strong portfolio evidence** |
 | Risk Treatment              | Open / In Treatment / Resolved / Accepted status model                                        | **Strong portfolio evidence** |
 | Control Ownership           | Control-owner assignment and accountability discussion                                        | **Good portfolio evidence**   |
-| Third-Party Risk            | Explicitly excluded from NovaPay                                                              | **Gap**                       |
+| Third-Party Risk            | Vendor risk explicitly assessed through the PayLink TPRM module                                                              | **Gap**                       |
 | Control Testing             | Control effectiveness documented, but independently unverified                                | **Gap / development area**    |
 | Quantitative Risk Modelling | Explicitly not performed                                                                      | **Gap**                       |
 | Audit Readiness             | Evidence-oriented methodology and limitations                                                 | **Moderate evidence**         |
