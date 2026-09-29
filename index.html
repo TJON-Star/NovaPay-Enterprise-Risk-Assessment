@@ -77,7 +77,7 @@ svg text{fill:var(--text);font-family:inherit;}
 .dot{width:10px;height:10px;border-radius:50%;display:inline-block;}
 .donutrow{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
 .donut{width:150px;height:150px;border-radius:50%;
-  background:conic-gradient(var(--eff) 0 94.4%, var(--gap) 94.4% 100%);
+  background:conic-gradient(var(--eff) 0 89.5%, var(--gap) 89.5% 100%);
   display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .donut-inner{width:104px;height:104px;border-radius:50%;background:var(--panel);
   display:flex;flex-direction:column;align-items:center;justify-content:center;}
@@ -92,6 +92,15 @@ svg text{fill:var(--text);font-family:inherit;}
 .bar-fill{height:100%;border-radius:6px;}
 .bar-val{width:80px;text-align:right;flex-shrink:0;font-weight:700;}
 footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;}
+.exec-summary{border-left:4px solid var(--accent);}
+.exec-body p{margin:0 0 12px;font-size:.9rem;line-height:1.65;}
+.exec-body p:last-child{margin-bottom:0;}
+.exec-body strong{color:var(--text);}
+.exec-actions{margin-top:16px;padding-top:14px;border-top:1px solid var(--border);}
+.exec-actions h3{margin:0 0 10px;font-size:.78rem;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);font-weight:600;}
+.exec-actions ol{margin:0;padding-left:20px;font-size:.88rem;line-height:1.6;}
+.exec-actions li{margin-bottom:8px;}
+.exec-actions li:last-child{margin-bottom:0;}
 </style>
 </head>
 <body>
@@ -102,21 +111,39 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
     <h1>NovaPay Enterprise Risk Assessment</h1>
     <p>Third-Party / Vendor Risk Module · Vendor: PayLink Cloud Services Ltd. · Cloud payment API &amp; transaction-processing infrastructure · Assessment: Initial TPRM</p>
   </div>
-  <span class="pill crit">Overall Inherent Risk: Critical</span>
+  <span class="pill crit">Overall Inherent Vendor Risk: Critical</span>
 </header>
+
+<section class="exec-summary">
+  <h2>Executive Summary</h2>
+  <p class="sub">Prepared for the Vendor Risk Committee · Initial TPRM assessment · PayLink Cloud Services Ltd.</p>
+  <div class="exec-body">
+    <p><strong>PayLink Cloud Services is a critical vendor.</strong> It provides the cloud payment API and transaction-processing infrastructure NovaPay relies on to accept and settle card payments. A failure or compromise at PayLink would directly disrupt payment processing and could expose cardholder data. The vendor is assessed as inherently <strong>Critical</strong>.</p>
+    <p><strong>The evidence package is broadly complete, but completeness is not assurance.</strong> PayLink submitted 17 of 19 requested evidence items. Only one of six sampled controls was fully effective. Three findings remain open, including privileged access weaknesses and unverified disaster recovery capability. The ISO 27001 certificate on file has not had its scope or validity confirmed, and PCI DSS attestation for the cardholder data environment has not been received. Current residual risk remains <strong>High</strong>, with one open finding linked to a Critical-rated risk.</p>
+    <p><strong>No risk acceptance has been recorded.</strong> All findings are routed to mitigation. The outstanding DR test report (VTF-03) is a key outstanding item that, once received and validated, would allow reassessment of the two highest-scoring risks in the register.</p>
+  </div>
+  <div class="exec-actions">
+    <h3>Top 3 Actions This Quarter</h3>
+    <ol>
+      <li><strong>Obtain and validate the DR test report</strong> — closes VTF-03 (links to VTR-03 Critical and VTR-10 High).</li>
+      <li><strong>Request current PCI DSS AOC/ROC with scope statement</strong> — confirm coverage of the NovaPay cardholder data environment (VTR-11).</li>
+      <li><strong>Remediate two overdue critical vulnerabilities and complete the privileged-access review</strong> — closes VTF-01 and VTF-02.</li>
+    </ol>
+  </div>
+</section>
 
 <div class="kpis">
   <div class="kpi"><div class="num crit-txt">3</div><div class="lbl">Critical-rated risks</div></div>
-  <div class="kpi"><div class="num high-txt">7</div><div class="lbl">High-rated risks</div></div>
-  <div class="kpi"><div class="num">17 / 18</div><div class="lbl">Evidence items received</div></div>
+  <div class="kpi"><div class="num high-txt">8</div><div class="lbl">High-rated risks</div></div>
+  <div class="kpi"><div class="num">17 / 19</div><div class="lbl">Evidence items received</div></div>
   <div class="kpi"><div class="num crit-txt">3</div><div class="lbl">Open findings, all High severity</div></div>
-  <div class="kpi"><div class="num">1 / 5</div><div class="lbl">Controls fully effective</div></div>
+  <div class="kpi"><div class="num">1 / 6</div><div class="lbl">Controls fully effective</div></div>
   <div class="kpi"><div class="num high-txt">High</div><div class="lbl">Current residual risk (unchanged)</div></div>
 </div>
 
 <div class="grid2">
   <section>
-    <h2>Risk Register — 10 vendor risk scenarios</h2>
+    <h2>Risk Register — 11 vendor risk scenarios</h2>
     <p class="sub">Likelihood × Impact, 5×5 model. 20–25 Critical · 12–19 High · 6–11 Medium · 1–5 Low</p>
     <div class="tablewrap">
     <table>
@@ -131,6 +158,7 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
       <tr><td>VTR-08</td><td>Subcontractor introduces additional security exposure</td><td>3</td><td>4</td><td>12</td><td><span class="badge b-high">High</span></td></tr>
       <tr><td>VTR-09</td><td>Improper / excessive data retention exposes information</td><td>3</td><td>4</td><td>12</td><td><span class="badge b-high">High</span></td></tr>
       <tr><td>VTR-10</td><td>Vendor lacks effective recovery capability post-disruption</td><td>3</td><td>5</td><td>15</td><td><span class="badge b-high">High</span></td></tr>
+      <tr><td>VTR-11</td><td>PCI DSS compliance cannot be validated — attestation scope, currency, or coverage insufficient</td><td>3</td><td>5</td><td>15</td><td><span class="badge b-high">High</span></td></tr>
     </table>
     </div>
   </section>
@@ -198,11 +226,10 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
       <!-- VTR-04 L4 I4 -->
       <circle cx="200" cy="80" r="6" fill="#fff" stroke="var(--high)" stroke-width="2"/><text x="200" y="83" text-anchor="middle" font-size="7" fill="#111">4</text>
       <!-- VTR-05 L3 I5 -->
-      <circle cx="152" cy="32" r="6" fill="#fff" stroke="var(--high)" stroke-width="2"/><text x="152" y="35" text-anchor="middle" font-size="7" fill="#111">5</text>
-      <!-- VTR-06 L3 I5 offset -->
-      <circle cx="164" cy="32" r="6" fill="#fff" stroke="var(--high)" stroke-width="2"/><text x="164" y="35" text-anchor="middle" font-size="7" fill="#111">6</text>
-      <!-- VTR-10 L3 I5 offset -->
-      <circle cx="176" cy="32" r="6" fill="#fff" stroke="var(--high)" stroke-width="2"/><text x="176" y="35" text-anchor="middle" font-size="7" fill="#111">10</text>
+      <circle cx="134" cy="32" r="6" fill="#fff" stroke="var(--high)" stroke-width="2"/><text x="134" y="35" text-anchor="middle" font-size="7" fill="#111">5</text>
+      <circle cx="145" cy="32" r="6" fill="#fff" stroke="var(--high)" stroke-width="2"/><text x="145" y="35" text-anchor="middle" font-size="7" fill="#111">6</text>
+      <circle cx="156" cy="32" r="6" fill="#fff" stroke="var(--high)" stroke-width="2"/><text x="156" y="35" text-anchor="middle" font-size="7" fill="#111">10</text>
+      <circle cx="167" cy="32" r="6" fill="#fff" stroke="var(--high)" stroke-width="2"/><text x="167" y="35" text-anchor="middle" font-size="7" fill="#111">11</text>
       <!-- VTR-07,08,09 L3 I4 -->
       <circle cx="152" cy="80" r="6" fill="#fff" stroke="var(--high)" stroke-width="2"/><text x="152" y="83" text-anchor="middle" font-size="7" fill="#111">7,8,9</text>
     </svg>
@@ -231,17 +258,17 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
 
 <section>
   <h2>Due-Diligence Evidence Package</h2>
-  <p class="sub">18 evidence requests tied to specific risk areas · PayLink submission status</p>
+  <p class="sub">19 evidence requests tied to specific risk areas · PayLink submission status</p>
   <div class="donutrow">
-    <div class="donut"><div class="donut-inner"><b>94%</b><span>received</span></div></div>
+    <div class="donut"><div class="donut-inner"><b>89%</b><span>received</span></div></div>
     <div style="flex:1;min-width:260px">
-      <div class="bar-row"><span class="lbl">Received / Satisfactory</span><div class="bar-track"><div class="bar-fill" style="width:94%;background:var(--eff)"></div></div><span class="bar-val">17 items</span></div>
-      <div class="bar-row"><span class="lbl">Missing (DR test report)</span><div class="bar-track"><div class="bar-fill" style="width:6%;background:var(--gap)"></div></div><span class="bar-val">1 item</span></div>
-      <p class="sub" style="margin-top:10px">Note: "received" ≠ validated. ISO 27001 and similar items are marked satisfactory subject to scope/validity verification — a document existing is not the same as a control operating effectively.</p>
+      <div class="bar-row"><span class="lbl">Received (subject to validation)</span><div class="bar-track"><div class="bar-fill" style="width:89%;background:var(--eff)"></div></div><span class="bar-val">17 items</span></div>
+      <div class="bar-row"><span class="lbl">Missing (DR test + PCI DSS)</span><div class="bar-track"><div class="bar-fill" style="width:11%;background:var(--gap)"></div></div><span class="bar-val">2 items</span></div>
+      <p class="sub" style="margin-top:10px">Note: "received" ≠ validated. The DR test report and PCI DSS attestation remain outstanding. ISO 27001 and similar items are marked satisfactory subject to scope/validity verification — a document existing is not the same as a control operating effectively.</p>
     </div>
   </div>
   <details style="margin-top:6px">
-    <summary style="cursor:pointer;color:var(--accent);font-size:.85rem">View full 18-item evidence register</summary>
+    <summary style="cursor:pointer;color:var(--accent);font-size:.85rem">View full 19-item evidence register</summary>
     <div class="tablewrap" style="margin-top:10px">
     <table>
       <tr><th>ID</th><th>Risk area</th><th>Evidence requested</th><th>Status</th></tr>
@@ -263,6 +290,7 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
       <tr><td>DD-16</td><td>Service availability</td><td>SLA and availability commitments</td><td><span class="badge b-eff">Received</span></td></tr>
       <tr><td>DD-17</td><td>Recovery</td><td>RTO/RPO documentation</td><td><span class="badge b-eff">Received</span></td></tr>
       <tr><td>DD-18</td><td>Security contacts</td><td>Incident escalation contacts</td><td><span class="badge b-eff">Received</span></td></tr>
+      <tr><td>DD-19</td><td>PCI DSS compliance</td><td>Current AOC/ROC + scope statement covering cardholder data environment</td><td><span class="badge b-gap">Not received</span></td></tr>
     </table>
     </div>
   </details>
@@ -270,7 +298,7 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
 
 <section>
   <h2>Control Assessment</h2>
-  <p class="sub">5 representative controls tested in detail. A policy existing (design) is distinguished from it operating effectively (operating evidence).</p>
+  <p class="sub">6 representative controls tested in detail. A policy existing (design) is distinguished from it operating effectively (operating evidence).</p>
   <div class="tablewrap">
   <table>
     <tr><th>Control</th><th>Evidence</th><th>Design</th><th>Operating</th><th>Sufficiency</th><th>Overall</th></tr>
@@ -279,6 +307,7 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
     <tr><td>Critical vulnerabilities remediated on time</td><td>EV-06/07</td><td>Effective</td><td>Partially effective — 2 criticals overdue</td><td>Sufficient to flag exception</td><td><span class="badge b-part">Partially Effective</span></td></tr>
     <tr><td>Security incidents formally managed</td><td>EV-09/10</td><td>Effective</td><td>Effective (exercise evidence)</td><td>Sufficient</td><td><span class="badge b-eff">Effective</span></td></tr>
     <tr><td>Disaster recovery capability tested</td><td>EV-13</td><td>Requirement exists</td><td>Not determined — no test evidence</td><td>Insufficient</td><td><span class="badge b-gap">Evidence Gap</span></td></tr>
+    <tr><td>PCI DSS compliance maintained and validated</td><td>DD-19</td><td>Contractual requirement exists</td><td>Not determined — no attestation received</td><td>Insufficient</td><td><span class="badge b-gap">Evidence Gap</span></td></tr>
   </table>
   </div>
 </section>
@@ -326,6 +355,7 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
     <tr><td>SLA availability</td><td>Below contractual threshold</td><td>VTR-03 / VTR-02</td><td>NovaPay Service Owner</td><td>Vendor performance review and escalation under contract</td><td>Reassess affected availability risks if failure is material or persistent</td></tr>
     <tr><td>Open High-severity findings</td><td>Beyond agreed remediation timeframe</td><td>VTF-01, VTF-02, VTF-03</td><td>NovaPay Risk Owner</td><td>Management escalation; evaluate exception or further treatment</td><td>Reassess linked risks after remediation validation or material deterioration</td></tr>
     <tr><td>Security certification</td><td>Expired or scope no longer supports reliance</td><td>VTR-01, VTR-04, VTR-07</td><td>Third-Party Risk / Compliance</td><td>Evidence request and reassessment</td><td>Event-driven reassessment of affected risk areas</td></tr>
+    <tr><td>PCI DSS attestation</td><td>Expired, scope-reduced, or not received</td><td>VTR-11</td><td>Third-Party Risk / Compliance</td><td>Evidence request and escalation; assess contractual remedies and card-brand exposure</td><td>Reassess VTR-11 when current AOC/ROC with scope statement is validated</td></tr>
   </table>
   </div>
 </section>
@@ -346,7 +376,7 @@ footer{text-align:center;color:var(--muted);font-size:.75rem;padding:18px 0 6px;
   </div>
 </section>
 
-<footer>NovaPay Enterprise Risk Assessment — Third-Party / Vendor Risk Module · Portfolio project, simulated data · Source: github.com/TJON-Star/NovaPay-Enterprise-Risk-Assessment</footer>
+<footer>NovaPay Enterprise Risk Assessment — Third-Party / Vendor Risk Module · Portfolio project, simulated data · Assessment scope: TPRM initial review · PCI DSS attestation outstanding at time of publication · Source: github.com/TJON-Star/NovaPay-Enterprise-Risk-Assessment</footer>
 </div>
 </body>
 </html>
