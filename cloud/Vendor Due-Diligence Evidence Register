@@ -22,6 +22,7 @@ Now we move from “what could go wrong?” to “what evidence would we require
 | DD-16 | Service Availability            | SLA and availability commitments                            | Establishes expectations for critical service availability               | Pending       |
 | DD-17 | Recovery                        | RTO/RPO documentation                                       | Determines expected recovery capability                                  | Pending       |
 | DD-18 | Security Contacts               | Security incident escalation contacts                       | Establishes an operational escalation path                               | Pending       |
+| DD-19 | PCI DSS Compliance              | Current AOC/ROC + scope statement covering cardholder data environment | Establishes whether the vendor's PCI DSS attestation applies to the services and cardholder data environment relevant to NovaPay | Pending       |
 
 
 **The important part: evidence quality**
