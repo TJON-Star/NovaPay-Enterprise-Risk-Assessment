@@ -16,12 +16,12 @@ Critical
 ↓
 
 4. Risk Register
-10 vendor-specific risks
+11 vendor-specific risks
 
 ↓
 
 5. Due-Diligence Register
-18 evidence requests
+19 evidence requests
 
 ↓
 
@@ -45,4 +45,4 @@ Control objective → evidence → effectiveness
 
 10. Ongoing Vendor Monitoring
 
-**The next stage is the interesting one: we're going to populate PayLink's fictional evidence package and actually test the controls.**
+**Current state:** PayLink's fictional evidence package has been populated and the representative controls have been tested. Two evidence gaps remain: DR test evidence and PCI DSS AOC/ROC with scope evidence. The dashboard now carries the workflow through findings, residual-risk treatment, exception management and ongoing monitoring.
