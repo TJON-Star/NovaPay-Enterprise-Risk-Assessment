@@ -21,6 +21,7 @@ A threshold breach is a monitoring signal. It is not, by itself, evidence that t
 | SLA availability | Below contractual threshold | VTR-03 / VTR-02 | NovaPay Service Owner | Vendor performance review and contractual escalation | Reassess if failure is material or persistent |
 | Open High-severity findings | Beyond agreed remediation timeframe | VTF-01, VTF-02, VTF-03 | NovaPay Risk Owner | Management escalation and treatment review | Reassess linked risks after validation or material deterioration |
 | Security certification | Expired or scope no longer supports reliance | VTR-01, VTR-04, VTR-07 | Third-Party Risk / Compliance | Evidence request and reassessment | Event-driven reassessment of affected risk areas |
+| PCI DSS attestation | Expired, scope-reduced, or not received | VTR-11 | Third-Party Risk / Compliance | Evidence request and escalation; assess contractual remedies and card-brand exposure | Reassess VTR-11 when current AOC/ROC with scope statement is validated |
 
 ## Periodic Monitoring
 
