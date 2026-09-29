@@ -5,16 +5,17 @@
 | VTR-01 | Compromise of vendor environment results in unauthorized access to NovaPay data |          4 |      5 |             20 | Critical |
 | VTR-02 | Compromise of vendor API disrupts payment processing                            |          4 |      5 |             20 | Critical |
 | VTR-03 | Vendor outage disrupts critical payment services                                |          4 |      5 |             20 | Critical |
-| VTR-04 | Excessive vendor privileges enable unauthorized activity                        |          3 |      5 |             15 | High     |
-| VTR-05 | Vendor vulnerability exposes integrated NovaPay systems                         |          4 |      4 |             16 | High     |
+| VTR-04 | Vendor vulnerability exposes integrated NovaPay systems                         |          4 |      4 |             16 | High     |
+| VTR-05 | Excessive vendor privileges enable unauthorized activity                        |          3 |      5 |             15 | High     |
 | VTR-06 | Delayed vendor incident notification increases impact of security incident      |          3 |      5 |             15 | High     |
 | VTR-07 | Inadequate vendor logging prevents effective investigation                      |          3 |      4 |             12 | High     |
 | VTR-08 | Subcontractor introduces additional security exposure                           |          3 |      4 |             12 | High     |
 | VTR-09 | Improper data retention exposes NovaPay information                             |          3 |      4 |             12 | High     |
 | VTR-10 | Vendor lacks effective recovery capability following disruption                 |          3 |      5 |             15 | High     |
+| VTR-11 | PCI DSS compliance cannot be validated because current attestation scope, currency, or coverage is not established | 3 | 5 | 15 | High |
 
 **we haven't assessed controls yet.**
 
-We don't know whether PayLink has ISO 27001 certification, SOC 2, MFA, encryption, tested disaster recovery, vulnerability management, logging, etc.
+We don't know whether PayLink has ISO 27001 certification, SOC 2, MFA, encryption, tested disaster recovery, vulnerability management, logging, PCI DSS attestation, etc.
 
 **So we don't give them credit for those things yet.**
