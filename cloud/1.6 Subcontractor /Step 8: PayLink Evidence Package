@@ -18,5 +18,6 @@
 | EV-16       | Subcontractor Register             | Received         |
 | EV-17       | SLA                                | Received         |
 | EV-18       | RTO/RPO documentation              | Received         |
+| EV-19       | PCI DSS AOC/ROC + scope statement  | **Not provided** |
 
 **Now we test the evidence instead of simply counting documents.**
