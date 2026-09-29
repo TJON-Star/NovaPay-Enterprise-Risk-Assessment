@@ -2,7 +2,7 @@ Control assessment determines whether the controls supporting the identified ven
 
 A documented policy does not by itself demonstrate operating effectiveness. Where evidence only demonstrates that a control is documented, the assessment should distinguish between control design and operating effectiveness.
 
-For this assessment, five controls are tested in detail as representative examples. The wider control inventory is maintained separately.
+For this assessment, six controls are tested in detail as representative examples. The wider control inventory is maintained separately.
 
 ## Control Assessment
 
@@ -13,6 +13,7 @@ For this assessment, five controls are tested in detail as representative exampl
 | Critical vulnerabilities are remediated within defined timelines | EV-06, EV-07 | Vulnerability management process exists, but two critical vulnerabilities exceeded the remediation target | Effective                                                                      | Partially Effective                            | Sufficient to identify exception | Partially Effective |
 | Security incidents are formally managed                          | EV-09, EV-10 | Incident Response Plan exists and an exercise was performed                                               | Effective                                                                      | Effective based on available exercise evidence | Sufficient                       | Effective           |
 | Disaster recovery capability is tested                           | EV-13        | No recent DR test evidence was supplied                                                                   | Designed requirement exists, but operating effectiveness cannot be established | Not Determined                                 | Insufficient                     | Evidence Gap        |
+| PCI DSS compliance is maintained and validated                    | DD-19        | No current PCI DSS AOC/ROC and scope statement was supplied                                              | Contractual requirement exists; applicability and coverage cannot be established | Not Determined                                 | Insufficient                     | Evidence Gap        |
 
 ## Interpretation
 
